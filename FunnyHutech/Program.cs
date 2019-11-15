@@ -6,6 +6,7 @@ namespace FunnyHutech
     {
         static void Main(string[] args)
         {
+            //funy
             Console.WriteLine("Hello World!");
         }
     }
