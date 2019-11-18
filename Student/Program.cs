@@ -10,6 +10,7 @@ namespace Student
     {
         static void Main(string[] args)
         {
+            //19112019
             Console.Write("Number of Student = ");
             //lay so luong sinh vien do nguoi dung nhap
             //ctrl + k + c: comment
