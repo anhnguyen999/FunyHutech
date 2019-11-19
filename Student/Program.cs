@@ -12,7 +12,7 @@ namespace Student
 {
     class Program
     {
-        static Student[] studentList;
+        static List<Person>  studentList;
         static void Main(string[] args)
         {
             Console.Write("Number of Student = ");
@@ -28,6 +28,7 @@ namespace Student
             InputStudentList(numOfStudent);
             Console.WriteLine("Danh sach sinh vien");
             OutputStudentList();
+            OutputFaculty();
             try
             {
                 numOfStudent = int.Parse(Console.ReadLine());
@@ -39,14 +40,7 @@ namespace Student
                 Console.WriteLine("Invalid Input");
             }
 
-            string fa;
-            Console.Write("Nhap ten khoa can tim: ");
-            fa = Console.ReadLine();
-            OutputFaculty(fa);
-
-            InputStudentList(numOfStudent);
-
-         
+            
 
             //dung man hinh de xem ket qua
             Console.ReadKey();
@@ -55,17 +49,20 @@ namespace Student
         }
         private static void OutputStudentList()
         {
-            foreach (Student item in studentList)
+            foreach (Person item in studentList)
             {
                 Console.WriteLine("_____");
                 Console.Write("ID: {0}\n FullName: {1}\n Mark: {2}\n Faculty: {3}", item.StudentID, item.FullName, item.Mark, item.Faculty);
                 Console.WriteLine("\n_____");
             }
         }
-        private static void OutputFaculty(string fa)
+        private static void OutputFaculty()
         {
 
-            foreach(Student item in studentList)
+            string fa;
+            Console.Write("Nhap ten khoa can tim: ");
+            fa = Console.ReadLine();
+            foreach (Person item in studentList)
             {
                 if(String.Compare(fa, item.Faculty, true) == 0)
                 {
@@ -79,26 +76,15 @@ namespace Student
         private static void InputStudentList(int numOfStudent)
         {
             //tao mang danh sach sinh vien
-            studentList = new Student[numOfStudent];
-            Student student;
+            studentList = new List<Person>();
+            Person student;
             for (int i = 0; i < numOfStudent; i++)
             {
                 student = new Student();
-                Console.Write("ID = ");
-                student.StudentID = int.Parse(Console.ReadLine());
-
-                Console.Write("Fullname = ");
-                student.FullName = Console.ReadLine();
-
-                Console.Write("Mark = ");
-                student.Mark = int.Parse(Console.ReadLine());
-
-                Console.Write("Faculty = ");
-                student.Faculty = Console.ReadLine();
+                student.Input();
                 //tuong tu nhap cho cac thuoc tinh khac
                 //dua doi tuong vao mang
-
-                studentList[i] = student;
+                studentList.Add(student);
             }
 
         }
