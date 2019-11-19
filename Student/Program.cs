@@ -5,7 +5,7 @@ using System.Text;
 using System.Threading.Tasks;
 
 /// <summary>
-/// Phan Hai Dang, Do Van Linh, Truong Huu Uy
+/// Phan Hai Dang, Do Van Linh, Truong Huu Uy   
 /// </summary>
 
 namespace Student
