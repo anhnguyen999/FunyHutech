@@ -6,12 +6,11 @@ using System.Threading.Tasks;
 
 namespace Student
 {
-    class Student
+    class Student: Person
     {
-        public int StudentID { get; set; }
+        private int StudentID { get; set; }
 
-        public float Mark { get; set; }
-
+        private float Mark { get; set; }
 
         public Student()
         {
@@ -19,11 +18,12 @@ namespace Student
         }
 
         public Student(int studentID, string fullName, float mark, string faculty)
+        : base(FullName, Faculty)
         {
             StudentID = studentID;
-            FullName = fullName;
+        
             Mark = mark;
-            Faculty = faculty;
+         
         }
         internal void Input()
         {
@@ -35,7 +35,7 @@ namespace Student
             this.FullName = Console.ReadLine();
 
             Console.Write("Mark = ");
-            this.Mark = int.Parse(Console.ReadLine());
+            this.Mark = float.Parse(Console.ReadLine());
 
             Console.Write("Faculty = ");
             this.Faculty = Console.ReadLine();
