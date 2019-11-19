@@ -6,24 +6,22 @@ using System.Threading.Tasks;
 
 namespace Student
 {
-    class Student
+    class Student:Person
     {
         public int StudentID { get; set; }
-        public string FullName { get; set; }
+        
         public float Mark { get; set; }
-        public string Faculty { get; set; }
+        
 
         public Student()
         {
 
         }
 
-        public Student(int studentID, string fullName, float mark, string faculty)
+        public Student(int studentID,string fullName, float mark, string faculty):base(fullName, faculty)
         {
             StudentID = studentID;
-            FullName = fullName;
             Mark = mark;
-            Faculty = faculty;
         }
 
         //INPUT A STUDENT
@@ -31,18 +29,18 @@ namespace Student
         {
             Console.Write("ID: ");
             StudentID = int.Parse(Console.ReadLine());
-            Console.Write("Name: ");
-            FullName = Console.ReadLine();
             Console.Write("Mark: ");
             Mark = float.Parse(Console.ReadLine());
-            Console.Write("Faculty: ");
-            Faculty = Console.ReadLine();
+            InputPerson();
+            Console.WriteLine();
         }
 
         //SHOW A STUDENT
         public void Show()
         {
-            Console.WriteLine("ID: {0}\nName: {1}\nMark: {2}\nFaculty: {3}", this.StudentID, this.FullName, this.Mark, this.Faculty);
+            Console.WriteLine("ID: {0}", this.StudentID);
+            Console.WriteLine("Mark: {0}", this.Mark);
+            ShowPerson();
         }
     }
 }
