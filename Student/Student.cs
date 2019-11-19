@@ -25,5 +25,17 @@ namespace Student
             Mark = mark;
             Faculty = faculty;
         }
+        internal void Input()
+        {
+            Console.Write("ID: ");
+            this.StudentID = int.Parse(Console.ReadLine());
+            Console.Write("Name: ");
+            this.FullName = Console.ReadLine();
+            Console.Write("Mark: ");
+            this.Mark = float.Parse(Console.ReadLine());
+            Console.Write("Faculty: ");
+            this.Faculty = Console.ReadLine();
+            Console.WriteLine("---End A Student---\n");
+        }
     }
 }
