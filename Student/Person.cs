@@ -8,8 +8,8 @@ namespace Student
 {
     class Person
     {
-        public string FullName { get; set; }
-        public string Faculty { get; set; }
+        private string FullName { get; set; }
+        private string Faculty { get; set; }
     }
     public Person()
     {
