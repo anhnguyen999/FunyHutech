@@ -3,7 +3,10 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
-
+/// <summary>
+/// Nguyen Trong Duong
+/// Do Thanh so
+/// </summary>
 namespace Student
 {
     class Program
