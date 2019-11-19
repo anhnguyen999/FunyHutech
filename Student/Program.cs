@@ -16,6 +16,9 @@ namespace Student
         /// <summary>
         /// bai tap:
         /// 1.Xuat ra danh sach tat ca sinh vien CNTT
+        /// 2. viet ham xuat trong student
+        /// 3. doi danh sach sinh vien tu mang qua Lít
+        /// 4. Viet 1 person lam lop cha cho lop Student
         /// </summary>
         static Student[] studentList;
         static void Main(string[] args)
@@ -76,15 +79,7 @@ namespace Student
             for (int i = 0; i < numOfStudent; i++)
             {
                 student = new Student();
-                Console.Write("ID = ");
-                student.StudentID = int.Parse(Console.ReadLine());
-                //tuong tu nhap cho cac thuoc tinh khac
-                Console.Write("FullName= ");
-                student.FullName = (Console.ReadLine());
-                Console.Write("Mark = ");
-                student.Mark = float.Parse(Console.ReadLine());
-                Console.Write("Faculty = ");
-                student.Faculty = (Console.ReadLine());
+                student.Input();
                 //dua doi tuong vao mang
 
                 studentList[i] = student;
