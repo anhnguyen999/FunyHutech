@@ -12,7 +12,7 @@ namespace Student
 {
     class Program
     {
-        static Student[] studentList;
+        static List<Student> studentList;
         static int numOfStudent;
         static void Main(string[] args)
         {
@@ -31,9 +31,10 @@ namespace Student
             Console.WriteLine("++++++++++++++++++Nhap Vao Danh Sach SV +++++++++++++++++");
             InputStudentList(numOfStudent);
             Console.WriteLine("++++++++++++++++++Danh Sach Sinh Vien+++++++++++++++++");
-            OutputStudent();
+            OutputStudent(studentList);
 
             OutputStudentCNTT();
+            
             //dung man hinh de xem ket qua
             Console.ReadKey();
             
@@ -42,41 +43,43 @@ namespace Student
 
         private static void OutputStudentCNTT()
         {
-            Student[] studentKQ = new Student[numOfStudent];
-            studentKQ = studentList.Where< p => p.where
+            List<Student> studentKQ = new List<Student>();
+            studentKQ = studentList.Where(p => p.Faculty == "CNTT").ToList();
+            if(studentKQ.Count() > 0)
+            {
+                Console.WriteLine("Danh sach sinh vsien khoa CNTT");
+                OutputStudent(studentKQ);
+            }
+            else
+            {
+                Console.WriteLine("Khong co sinh vien khoa CNTT");
+            }
         }
 
-        private static void OutputStudent()
+        private static void OutputStudent(List<Student> studentList)
         {
             foreach (Student item in studentList)
             {
+
+                item.Show();
                 
-                Console.Write("ID: {0}\nFullName: {1}\nMark: {2}\nFaculty: {3}\n", item.StudentID, item.FullName,item.Mark,item.Faculty);
                 Console.WriteLine("....");
             }
+            
         }
 
-        private static void InputStudentList(int numOfStudent)
+        private static List<Student> InputStudentList(int numOfStudent)
         {
             //tao mang danh sach sinh vien
-            studentList = new Student[numOfStudent];
+            studentList = new List<Student>();
             Student student;
             for (int i = 0; i < numOfStudent; i++)
             {
-                student = new Student();
-                Console.WriteLine("+++ Student {0} +++", i + 1);
-                Console.Write("ID = ");
-                student.StudentID = int.Parse(Console.ReadLine());
-                Console.Write("Full Name = ");
-                student.FullName = Console.ReadLine();
-                Console.Write("Mark = ");
-                student.Mark = float.Parse(Console.ReadLine());
-                Console.Write("Faculty = ");
-                student.Faculty = Console.ReadLine();
-                //tuong tu nhap cho cac thuoc tinh khac
-                //dua doi tuong vao mang
-                studentList[i] = student;
+                Student item = new Student();
+                item.Input();
+                studentList.Add(item);
             }
+            return studentList;
         }
     }
 }
