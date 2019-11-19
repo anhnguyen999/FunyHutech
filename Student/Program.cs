@@ -5,7 +5,8 @@ using System.Text;
 using System.Threading.Tasks;
 /// <summary>
 /// Nguyen Trong Duong
-/// Do Thanh so
+/// Do Thanh son
+/// 
 /// </summary>
 namespace Student
 {
