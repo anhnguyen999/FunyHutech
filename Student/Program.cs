@@ -4,6 +4,8 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
+// Nguyễn Hoàng Minh, Phạm Quốc Khánh, Huỳnh Trần Quốc Cường
+
 namespace Student
 {
     class Program
