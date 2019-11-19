@@ -5,6 +5,10 @@ using System.Text;
 using System.Threading.Tasks;
 /// <summary>
 /// Tran Sy Tai, Le Duc Anh, Nguyen Dang Khoi
+/// 1. Xuat danh sach sinh vien khoa cntt
+/// 2. ham xuat trong student
+/// 3. doi danh sach sinh vien tu mang sang list
+/// 4. viet 1 lop person lam lop cha cho lop Student (dua thuoc tính Fullname Faculty sanbg lop person)
 /// </summary>
 
 namespace Student
@@ -12,7 +16,7 @@ namespace Student
     class Program
     {
         static int numOfStudent = 0;
-        static Student[] studentList;
+        static List<Student> studentList;
         static void Main(string[] args)
         {
             //lay so luong sinh vien do nguoi dung nhap
@@ -36,47 +40,41 @@ namespace Student
         private static void InputStudentList(int numOfStudent)
         {
             //tao mang danh sach sinh vien
-            studentList = new Student[numOfStudent];
+            studentList = new List<Student>();
             Student student;
             for (int i = 0; i < numOfStudent; i++)
             {
                 student = new Student();
                 Console.WriteLine("Student {0}:", i + 1);
-                Console.Write("ID: ");
-                student.StudentID = int.Parse(Console.ReadLine());
-                Console.Write("Name: ");
-                student.FullName = Console.ReadLine();
-                Console.Write("Mark: ");
-                student.Mark = float.Parse(Console.ReadLine());
-                Console.Write("Faculty: ");
-                student.Faculty = Console.ReadLine();
-                Console.WriteLine("---End A Student---\n");
+                student.Input();
                 //dua doi tuong vao mang
-                studentList[i] = student;
+                studentList.Add(student);
             }
         }
-        private static void ShowStudentList(Student[] studentList)
+        private static void ShowStudentList(List<Student> studentList)
         {           
             foreach (Student st in studentList)
             {
-                Console.Write("ID: {0}\nName: {1}\nMark: {2}\nFaculty: {3}", st.StudentID, st.FullName, st.Mark, st.Faculty);
+                st.Show();
                 Console.WriteLine();
             }
         }
-
+       
         private static void ShowFacultyCNTT()
         {
-            Student[] listKQ = new Student[numOfStudent];
-            listKQ = studentList.Where(p => p.Faculty == "CNTT").ToArray();
+            List<Student> listKQ = new List<Student>();
+            listKQ = studentList.Where(p => p.Faculty == "CNTT").ToList();
             if (listKQ.Count() > 0)
             {
-                Console.WriteLine("=====SHOW STUDENT LIST IN THE FACULTY 'CNTT'=====");
+                Console.WriteLine("\n=====SHOW STUDENT LIST IN THE FACULTY 'CNTT'=====");
                 ShowStudentList(listKQ);
             }
             else
             {
-                Console.WriteLine("There are no students in the faculty CNTT!\n");
+                Console.WriteLine("\nThere are no students in the faculty CNTT!\n");
             }
         }
+
+
     }
 }
