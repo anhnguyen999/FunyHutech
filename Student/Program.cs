@@ -4,6 +4,9 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
+/// <summary>
+/// Nguyen Van A, Nguyen Van B
+/// </summary>
 namespace Student
 {
     class Program
