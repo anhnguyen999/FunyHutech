@@ -15,6 +15,7 @@ namespace Student
         static List<Student> studentList;
         static void Main(string[] args)
         {
+
             //lay so luong sinh vien do nguoi dung nhap
             //ctrl + k + c: comment
             //ctrl + k + u: uncomment
@@ -51,7 +52,7 @@ namespace Student
             foreach (Student item in studentList)
             {
                 Console.WriteLine("___");
-                Console.Write("ID: {0}\n FullName: {1}\n Mark: {2}\n Faculty: {3}", item.StudentID, item.FullName, item.Mark, item.Faculty);
+                item.Show();
                 Console.WriteLine("\n_____");
             }
         }
