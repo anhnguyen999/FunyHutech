@@ -4,6 +4,11 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
+        /// <summary>
+        /// Duong Thanh Toan
+        /// Truong Thanh Tuyen
+        /// Tran Thi Anh Thu
+        /// </summary>
 namespace Student
 {
     class Program
@@ -28,7 +33,7 @@ namespace Student
             //dung man hinh de xem ket qua
             Console.ReadKey();
         }
-
+       
         private static void InputStudentList(int numOfStudent)
         {
             //tao mang danh sach sinh vien
