@@ -4,6 +4,8 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
+//Thanh vien nhom TPV
+//Nguyen Thai Hung Vuong, Nguyen Hoang Phuc, Nguyen Hoang Tu
 namespace Student
 {
     class Program
