@@ -9,7 +9,7 @@ namespace Student
     class Student : Person
     {
         public int StudentID { get; set; }
-        //
+       
         public float Mark { get; set; }
         
 
