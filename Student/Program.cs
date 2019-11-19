@@ -52,7 +52,7 @@ namespace Student
             {
                 
                 Console.Write("ID: {0}\nFullName: {1}\nMark: {2}\nFaculty: {3}\n", item.StudentID, item.FullName,item.Mark,item.Faculty);
-                Console.WriteLine("...");
+                Console.WriteLine("....");
             }
         }
 
