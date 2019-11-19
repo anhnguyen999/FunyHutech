@@ -3,14 +3,16 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
-
-
-//Nguyen Hong Quan, Luu Gia Huy, Tran Anh Quan
+///
+/// Nguyen Hong Quan
+/// Tran Anh Quan
+/// Luu Gia Huy
+///
 namespace Student
 {
     class Program
     {
-        static Student[] studentList;
+        static List<Student>  studentList;
         static void Main(string[] args)
         {
             Console.Write("Number of Student = ");
@@ -21,66 +23,69 @@ namespace Student
             int numOfStudent = 0;
             do
             {
-              Console.Write("Nhap so sinh vien: ");
-                
-            }while (!int.TryParse(Console.ReadLine(), out numOfStudent));
-           
+                Console.Write("Nhap so sinh vien: ");
+            } while (!int.TryParse(Console.ReadLine(), out numOfStudent));
             InputStudentList(numOfStudent);
-            Console.WriteLine("Danh sach sinh vien: ");
+            Console.WriteLine("Danh sach sinh vien");
             OutputStudentList();
+            OutputFaculty();
+            try
+            {
+                numOfStudent = int.Parse(Console.ReadLine());
+                
+            }
+            catch (Exception ex)
+            {
+
+                Console.WriteLine("Invalid Input");
+            }
+
+            
+
             //dung man hinh de xem ket qua
             Console.ReadKey();
-        }
 
+           
+        }
         private static void OutputStudentList()
         {
-                foreach (Student item in studentList)
-                {
-	    
-                Console.WriteLine("------");
-                Console.Write("ID: {0}\nFullName: {1}\nMark: {2}\nFaculty: {3}", item.StudentID,item.FullName,item.Mark,item.Faculty);
-                
-	            }
+            foreach (Student item in studentList)
+            {
+                Console.WriteLine("___");
+                Console.Write("ID: {0}\n FullName: {1}\n Mark: {2}\n Faculty: {3}", item.StudentID, item.FullName, item.Mark, item.Faculty);
+                Console.WriteLine("\n_____");
+            }
         }
+        private static void OutputFaculty()
+        {
 
-        private static void outStudentTech ( string a){
-            foreach (Student item in studentList) {
-                if ( string.Compare (a,item.Faculty, true)==0)
-                     Console.WriteLine("------");
-                Console.Write("ID: {0}\nFullName: {1}\nMark: {2}\nFaculty: {3}", item.StudentID,item.FullName,item.Mark,item.Faculty);
-                
-
+            string fa;
+            Console.Write("Nhap ten khoa can tim: ");
+            fa = Console.ReadLine();
+            foreach (Student item in studentList)
+            {
+                if(String.Compare(fa, item.Faculty, true) == 0)
+                {
+                    Console.WriteLine("___");
+                    Console.Write("ID: {0}\n FullName: {1}\n Mark: {2}\n Faculty: {3}", item.StudentID, item.FullName, item.Mark, item.Faculty);
+                    Console.WriteLine("\n_____");
+                }
 
             }
         }
-
-        
-
         private static void InputStudentList(int numOfStudent)
         {
             //tao mang danh sach sinh vien
-            studentList = new Student[numOfStudent];
+            studentList = new List<Student>();
             Student student;
             for (int i = 0; i < numOfStudent; i++)
             {
                 student = new Student();
-                Console.Write("ID = ");
-                student.StudentID = int.Parse(Console.ReadLine());
-                Console.Write("FullName = ");
-                student.FullName = Console.ReadLine();
-                Console.Write("Mark = ");
-                student.Mark = float.Parse(Console.ReadLine());
-                Console.Write("Faculty = ");
-                student.Faculty = Console.ReadLine();
-                Console.WriteLine("---- End ---");
+                student.Input();
                 //tuong tu nhap cho cac thuoc tinh khac
                 //dua doi tuong vao mang
-                studentList[i] = student;
-
+                studentList.Add(student);
             }
-            string a;
-            Console.WriteLine("Nhap :");
-            Console.ReadLine();
 
         }
     }
