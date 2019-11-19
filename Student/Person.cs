@@ -7,7 +7,7 @@ using System.Threading.Tasks;
 namespace Student
 {
     class Person
-    {//
+    {//11
         public string FullName { get; set; }
         public string Faculty { get; set; }
 
