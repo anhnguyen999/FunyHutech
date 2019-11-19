@@ -4,6 +4,10 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
+/// <summary>
+/// Phan Hai Dang, Do Van Linh, Truong Huu Uy
+/// </summary>
+
 namespace Student
 {
     class Program
