@@ -43,7 +43,7 @@ namespace Student
 
         private static void OutputStudentITList()
         {
-            //danh sach SV IT
+            //danh sach SV IT hjjjj
             foreach (Student item in studentList)
             {
                 if(string.Compare(item.Faculty,"IT",true)==0)
