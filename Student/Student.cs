@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace Student
 {
-    class Student: Person
+    class Student : Person
     {
         private int StudentID { get; set; }
 
@@ -18,13 +18,20 @@ namespace Student
         }
 
         public Student(int studentID, string fullName, float mark, string faculty)
-        : base(FullName, Faculty)
+        :base(fullName, faculty)
         {
             StudentID = studentID;
         
             Mark = mark;
+            Console.WriteLine("- Student(int,int,int)");
          
         }
+
+        public Student(string fullName, string faculty) : base(fullName, faculty)
+        {
+           
+        }
+
         internal void Input()
         {
 
@@ -45,5 +52,6 @@ namespace Student
         {
             Console.WriteLine("ID: {0}\nName: {1}\nMark: {2}\nFaculty: {3}", this.StudentID, this.FullName, this.Mark, this.Faculty);
         }
+       
     }
 }

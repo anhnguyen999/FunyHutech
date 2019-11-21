@@ -75,7 +75,5 @@ namespace Student
                 Console.WriteLine("\nKhong co sinh vien khoa CNTT!\n");
             }
         }
-
-
     }
 }
