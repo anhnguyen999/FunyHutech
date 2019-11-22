@@ -25,13 +25,13 @@ namespace Student
         }
 
         //INPUT A STUDENT
-        public void Input()
+        public override void Input()
         {
             Console.Write("ID: ");
             StudentID = int.Parse(Console.ReadLine());
             Console.Write("Mark: ");
             Mark = float.Parse(Console.ReadLine());
-            InputPerson();
+            base.Input();
             Console.WriteLine();
         }
 
@@ -40,7 +40,7 @@ namespace Student
         {
             Console.WriteLine("ID: {0}", this.StudentID);
             Console.WriteLine("Mark: {0}", this.Mark);
-            ShowPerson();
+            base.Show();
         }
     }
 }

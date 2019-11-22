@@ -15,8 +15,8 @@ namespace Student
 {
     class Program
     {
-        static int numOfStudent = 0;
-        static List<Student> studentList;
+        public static int numOfStudent;
+        public static List<Student> studentList = new List<Student>();
         static void Main(string[] args)
         {
             //lay so luong sinh vien do nguoi dung nhap
@@ -27,20 +27,25 @@ namespace Student
             {
                 Console.Write("Input Number Of Student: ");
             } while (!int.TryParse(Console.ReadLine(), out numOfStudent));
-            //do..while de k bi thoat 
+  
             Console.WriteLine("\n=====INPUT THE LIST OF STUDENT=====");
             InputStudentList(numOfStudent);
             Console.WriteLine("\n=====SHOW THE LIST OF STUDENT=====");
             ShowStudentList(studentList);
-            ShowFacultyCNTT();
+
+            Console.WriteLine("Faculty: ");
+            string faculty = Console.ReadLine();
+            List<Student> studentShowFaculty = SearchFaculty(faculty);
+            Console.WriteLine("The List of Student in the Faculty: {0}", faculty);
+            ShowFacultyIT();
+
             //dừng màn hình để xem kết quả
             Console.ReadKey();
         }
 
         private static void InputStudentList(int numOfStudent)
         {
-            //tạo mảng cho danh sách sinh viên
-            studentList = new List<Student>();
+            //tạo mảng cho danh sách sinh viên 
             Student student;
             for (int i = 0; i < numOfStudent; i++)
             {
@@ -60,21 +65,21 @@ namespace Student
             }
         }
        
-        private static void ShowFacultyCNTT()
+        private static List<Student> SearchFaculty(string faculty)
         {
-            List<Student> listKQ = new List<Student>();
-            listKQ = studentList.Where(p => p.Faculty == "CNTT").ToList();
-            if (listKQ.Count() > 0)
-            {
-                Console.WriteLine("\n=====SHOW THE LIST OF STUDENT IN THE FACULTY 'CNTT'=====");
-                ShowStudentList(listKQ);
-            }
-            else
-            {
-                Console.WriteLine("\nThere are no students in the faculty CNTT!\n");
-            }
+            return studentList.Where(p => p.Faculty.ToLower() == faculty.ToLower()).ToList();
         }
 
+        private static void ShowFacultyIT()
+        {
+            foreach (Student st in studentList)
+            {
+                if (string.Compare(st.Faculty, "IT", true) == 0)
+                {
+                    Console.WriteLine("ID: {0}\nName: {1}\nMark: {2}\nFaculty: {3}", st.StudentID, st.FullName, st.Mark, st.Faculty);
+                }
+            }
+        }
 
     }
 }

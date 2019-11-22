@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace Student
 {
-    class Person
+    abstract class Person
     {
         public string FullName { get; set; }
         public string Faculty { get; set; }
@@ -21,7 +21,7 @@ namespace Student
         }
 
         //INPUT PERSON FULLNAME + FACULTY
-        public void InputPerson()
+        public virtual void Input()
         {
             Console.Write("Name: ");
             FullName = Console.ReadLine();
@@ -30,7 +30,7 @@ namespace Student
         }
 
         //SHOW PERSON FULLNAME + FACULTY
-        public void ShowPerson()
+        public virtual void Show()
         {
             Console.WriteLine("Name: {0}", this.FullName);
             Console.WriteLine("Faculty: {0}", this.Faculty);
