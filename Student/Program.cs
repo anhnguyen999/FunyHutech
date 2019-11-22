@@ -17,13 +17,13 @@ namespace Student
         /// bai tap:
         /// 1.Xuat ra danh sach tat ca sinh vien CNTT
         /// 2. viet ham xuat trong student
-        /// 3. doi danh sach sinh vien tu mang qua Lít
+        /// 3. doi danh sach sinh vien tu mang qua List
         /// 4. Viet 1 person lam lop cha cho lop Student
         /// </summary>
-        static Student[] studentList;
+        static List<Student> studentList;
         static void Main(string[] args)
         {
-            Console.Write("Number of Student = ");
+            
             //lay so luong sinh vien do nguoi dung nhap
             //ctrl + k + c: comment
             //ctrl + k + u: uncomment
@@ -37,11 +37,20 @@ namespace Student
             
             InputStudentList(numOfStudent);
             Console.Write("Danh sach sinh vien: ");
-            OutputStudentList();
+            OutputStudentList(studentList);
             //dung man hinh de xem ket qua
-            Console.Write("Danh sach sinh vien CNTT: ");
-            OutputStudentITList();
+            Console.WriteLine("Danh sach sinh vien CNTT: ");
+            
+            Console.WriteLine("Nhap khoa can xuat danh sach sinh vien: ");
+            string faculty = Console.ReadLine();
+            List <Student> studentSearchResult = SearchFucalty(faculty);
+            Console.WriteLine("Danh sach sinh vien thuoc khoa {0},faculty ");
+            OutputStudentList(studentSearchResult);
             Console.ReadKey();
+        }
+        private static List<Student> SearchFucalty(string faculty)
+        {
+            return studentList.Where(s => s.Faculty.ToLower() == faculty.ToLower()).ToList();
         }
 
         private static void OutputStudentITList()
@@ -58,7 +67,7 @@ namespace Student
             }
         }
 
-        private static void OutputStudentList()
+        private static void OutputStudentList(List<Student> studentList)
         {
             // lap tung phan tu cua danh sach va in thong tin
             foreach (Student item in studentList)
@@ -74,7 +83,7 @@ namespace Student
         private static void InputStudentList(int numOfStudent)
         {
             //tao mang danh sach sinh vien
-            studentList = new Student[numOfStudent];
+            studentList = new List<Student>();
             Student student;
             for (int i = 0; i < numOfStudent; i++)
             {
@@ -82,7 +91,7 @@ namespace Student
                 student.Input();
                 //dua doi tuong vao mang
 
-                studentList[i] = student;
+                studentList.Add(student);
             }
         }
         
