@@ -4,26 +4,43 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace Student
+namespace StudentApp
 {
-    class Student
+    class Student : Person
     {
         public int StudentID { get; set; }
-        public string FullName { get; set; }
+
         public float Mark { get; set; }
-        public string Faculty { get; set; }
+
 
         public Student()
         {
 
         }
 
-        public Student(int studentID, string fullName, float mark, string faculty)
+        public Student(int studentID, string fullName, float mark, string faculty) : base(fullName, faculty)
         {
             StudentID = studentID;
-            FullName = fullName;
             Mark = mark;
-            Faculty = faculty;
+        }
+
+        //INPUT A STUDENT
+        public override void Input()
+        {
+            Console.Write("ID: ");
+            StudentID = int.Parse(Console.ReadLine());
+            Console.Write("Mark: ");
+            Mark = float.Parse(Console.ReadLine());
+            Input();
+            Console.WriteLine();
+        }
+
+        //SHOW A STUDENT
+        public void Show()
+        {
+            Console.WriteLine("ID: {0}", this.StudentID);
+            Console.WriteLine("Mark: {0}", this.Mark);
+            Show();
         }
     }
 }
