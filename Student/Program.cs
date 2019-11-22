@@ -4,11 +4,11 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-        /// <summary>
-        /// Duong Thanh Toan
-        /// Truong Thanh Tuyen
-        /// Tran Thi Anh Thu
-        /// </summary>
+/// <summary>
+/// Duong Thanh Toan
+/// Truong Thanh Tuyen
+/// Tran Thi Anh Thu
+/// </summary>
 namespace Student
 {
     class Program
@@ -20,36 +20,51 @@ namespace Student
         /// 3. doi danh sach sinh vien tu mang qua Lít
         /// 4. Viet 1 person lam lop cha cho lop Student
         /// </summary>
-        static Student[] studentList;
+        static List<Student> studentList;
         static void Main(string[] args)
         {
-            Console.Write("Number of Student = ");
+     
             //lay so luong sinh vien do nguoi dung nhap
             //ctrl + k + c: comment
             //ctrl + k + u: uncomment
             //ctrl + k + d: lam dep code, format code
-           
+
             int numOfStudent;
             do
             {
                 Console.Write("Number of Student");
             } while (!int.TryParse(Console.ReadLine(), out numOfStudent));
-            
+
             InputStudentList(numOfStudent);
-            Console.Write("Danh sach sinh vien: ");
-            OutputStudentList();
+            Console.WriteLine("Danh sach sinh vien: ");
+            OutputStudentITList(studentList);
             //dung man hinh de xem ket qua
-            Console.Write("Danh sach sinh vien CNTT: ");
-            OutputStudentITList();
+            Console.WriteLine("Danh sach sinh vien CNTT: ");
+            OutputStudentITList(studentList);
+            //Nhap khoa can xuat DS sv
+            Console.WriteLine("Nhap khoa can xuat DS Sinh vien:");
+            string faculty = Console.ReadLine();
+            SearchFaculty(faculty);
+            List<Student> studentSearchResult = SearchFaculty(faculty);
+            Console.WriteLine("Danh sach sinh vien thuoc khoa {0}", faculty);
+            OutputStudentITList(studentSearchResult);
+            //Tam ngung man hinh de xem ket qua
             Console.ReadKey();
+
         }
 
-        private static void OutputStudentITList()
+        //ham tim kiem khoa
+        private static List<Student> SearchFaculty(String faculty)
+        {
+            return studentList.Where(s => s.Faculty.ToLower() == faculty.ToLower()).ToList();
+        }
+
+        private static void OutputStudentITList(List<Student> listStudent)
         {
             //danh sach SV IT hjjjj
             foreach (Student item in studentList)
             {
-                if(string.Compare(item.Faculty,"IT",true)==0)
+                if (string.Compare(item.Faculty, "IT", true) == 0)
                 {
                     Console.WriteLine("--------");
                     Console.WriteLine("ID: {0}\n FullName: {1}\n Mark: {2}\nFaculty: {3}", item.StudentID, item.FullName, item.Mark, item.Faculty);
@@ -65,7 +80,7 @@ namespace Student
 
             {
                 Console.WriteLine("--------");
-                Console.WriteLine("ID: {0}\n FullName: {1}\n Mark: {2}\nFaculty: {3}",item.StudentID,item.FullName,item.Mark,item.Faculty);
+                Console.WriteLine("ID: {0}\n FullName: {1}\n Mark: {2}\nFaculty: {3}", item.StudentID, item.FullName, item.Mark, item.Faculty);
                 Console.WriteLine("--------");
 
             }
@@ -74,7 +89,7 @@ namespace Student
         private static void InputStudentList(int numOfStudent)
         {
             //tao mang danh sach sinh vien
-            studentList = new Student[numOfStudent];
+            studentList = new List<Student>();
             Student student;
             for (int i = 0; i < numOfStudent; i++)
             {
@@ -82,9 +97,9 @@ namespace Student
                 student.Input();
                 //dua doi tuong vao mang
 
-                studentList[i] = student;
+                studentList.Add(student);
             }
         }
-        
+
     }
 }

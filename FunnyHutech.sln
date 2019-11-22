@@ -5,7 +5,11 @@ VisualStudioVersion = 16.0.29215.179
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "FunnyHutech", "FunnyHutech\FunnyHutech.csproj", "{25917A8F-2B86-4E77-B266-62040B582681}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Student", "Student\Student.csproj", "{A191E2D9-C577-469B-A6F2-122CF1095901}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Student-App", "Student\Student-App.csproj", "{A191E2D9-C577-469B-A6F2-122CF1095901}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Bai Tap", "Bai Tap", "{544260BF-C75A-491F-8B3A-70FA75A76751}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "BaiTapSo3", "BaiTapSo3\BaiTapSo3.csproj", "{26630432-3629-4863-8452-69A6A2F20B15}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -21,9 +25,16 @@ Global
 		{A191E2D9-C577-469B-A6F2-122CF1095901}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{A191E2D9-C577-469B-A6F2-122CF1095901}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{A191E2D9-C577-469B-A6F2-122CF1095901}.Release|Any CPU.Build.0 = Release|Any CPU
+		{26630432-3629-4863-8452-69A6A2F20B15}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{26630432-3629-4863-8452-69A6A2F20B15}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{26630432-3629-4863-8452-69A6A2F20B15}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{26630432-3629-4863-8452-69A6A2F20B15}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(NestedProjects) = preSolution
+		{26630432-3629-4863-8452-69A6A2F20B15} = {544260BF-C75A-491F-8B3A-70FA75A76751}
 	EndGlobalSection
 	GlobalSection(ExtensibilityGlobals) = postSolution
 		SolutionGuid = {1BC03B78-742C-4166-A3A7-A90A7E5E8C43}

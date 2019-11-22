@@ -4,18 +4,18 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace StudentApp
+namespace Bai_tap_so_2
 {
-    abstract class Person
+    class Person
     {
-        public string Faculty { get; set; }
+        public int ID { get; set; }
         public string FullName { get; set; }
         public Person()
         {
         }
-        public Person(string faculty, string fullName)
+        public Person(int id, string fullName)
         {
-            Faculty = faculty;
+            ID = id;
 
             FullName = fullName;
         }
@@ -23,19 +23,16 @@ namespace StudentApp
         //ham Nhap Person
         public virtual void Input()
         {
-            Console.WriteLine("Faculty :=");
-            this.Faculty = Console.ReadLine();
+            Console.WriteLine("ID :=");
+            this.ID = int.Parse(Console.ReadLine());
             Console.WriteLine("FullName :=");
             this.FullName = Console.ReadLine();
         }
-        
-        
-        /*ham Xuat Person
+        //ham Xuat Person
         public virtual void OutPut()
         {
             Console.WriteLine("ID := {0} \n FullName := {1}\n",
-                this.Faculty, this.FullName);
+                this.ID, this.FullName);
         }
-        */
     }
 }
