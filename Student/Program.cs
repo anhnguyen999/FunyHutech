@@ -36,7 +36,7 @@ namespace Student
             Console.WriteLine("Faculty: ");
             string faculty = Console.ReadLine();
             List<Student> studentShowFaculty = SearchFaculty(faculty);
-            Console.WriteLine("The List of Student in the Faculty: {0}", faculty);
+            Console.WriteLine("The List of Student in the Faculty {0}", faculty);
             ShowFacultyIT();
 
             //dừng màn hình để xem kết quả
