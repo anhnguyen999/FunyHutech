@@ -9,7 +9,7 @@ using System.Threading.Tasks;
 /// Truong Thanh Tuyen
 /// Tran Thi Anh Thu
 /// </summary>
-namespace Student
+namespace StudentApp
 {
     class Program
     {
@@ -23,7 +23,7 @@ namespace Student
         static List<Student> studentList;
         static void Main(string[] args)
         {
-     
+
             //lay so luong sinh vien do nguoi dung nhap
             //ctrl + k + c: comment
             //ctrl + k + u: uncomment
@@ -37,7 +37,7 @@ namespace Student
 
             InputStudentList(numOfStudent);
             Console.WriteLine("Danh sach sinh vien: ");
-            OutputStudentITList(studentList);
+            OutputStudentList(numOfStudent);
             //dung man hinh de xem ket qua
             Console.WriteLine("Danh sach sinh vien CNTT: ");
             OutputStudentITList(studentList);
@@ -67,20 +67,19 @@ namespace Student
                 if (string.Compare(item.Faculty, "IT", true) == 0)
                 {
                     Console.WriteLine("--------");
-                    Console.WriteLine("ID: {0}\n FullName: {1}\n Mark: {2}\nFaculty: {3}", item.StudentID, item.FullName, item.Mark, item.Faculty);
+                    Console.WriteLine("ID: {0}\n FullName: {1}\n Mark: {2}\nFaculty: {3}", item.ID, item.FullName, item.Mark, item.Faculty);
                     Console.WriteLine("--------");
                 }
             }
         }
 
-        private static void OutputStudentList()
+        private static void OutputStudentList(int numOfStudent)
         {
             // lap tung phan tu cua danh sach va in thong tin
             foreach (Student item in studentList)
-
             {
                 Console.WriteLine("--------");
-                Console.WriteLine("ID: {0}\n FullName: {1}\n Mark: {2}\nFaculty: {3}", item.StudentID, item.FullName, item.Mark, item.Faculty);
+                Console.WriteLine("ID: {0}\n FullName: {1}\n Mark: {2}\nFaculty: {3}", item.ID, item.FullName, item.Mark, item.Faculty);
                 Console.WriteLine("--------");
 
             }

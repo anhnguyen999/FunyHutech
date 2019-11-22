@@ -34,13 +34,12 @@ namespace StudentApp
             this.Faculty = Console.ReadLine();
         }
 
-        /*ham xuat mot Student
+        // ham xuat mot Student
         public override void OutPut()
         {
             base.OutPut();//goi ham xuat cua lop Person
-            Console.WriteLine("Mark := {2} \n Faculty := {3}\n",
-                 this.Mark, this.Faculty);
+            Console.WriteLine("ID := {2} \n Mark := {3}\n",
+                 this.ID, this.Mark);
         }
-        */
     }
 }
