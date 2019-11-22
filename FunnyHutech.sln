@@ -7,6 +7,11 @@ Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "FunnyHutech", "FunnyHutech\
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Student", "Student\Student.csproj", "{A191E2D9-C577-469B-A6F2-122CF1095901}"
 EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Bai Tap", "Bai Tap", "{A67DE1FA-9721-4F16-A576-09E5593DBFC4}"
+	ProjectSection(SolutionItems) = preProject
+		F:\Hutech\Nam Hoc 2019 - 2020\Hoc Ky 1\Lab LapTrinhWindows HK1B - 2019 2020\Lab01-LapTrinhHuongDoiTuongUngdungConsole.pdf = F:\Hutech\Nam Hoc 2019 - 2020\Hoc Ky 1\Lab LapTrinhWindows HK1B - 2019 2020\Lab01-LapTrinhHuongDoiTuongUngdungConsole.pdf
+	EndProjectSection
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU

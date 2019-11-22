@@ -9,7 +9,7 @@ using System.Threading.Tasks;
         /// Truong Thanh Tuyen
         /// Tran Thi Anh Thu
         /// </summary>
-namespace Student
+namespace StudentApp
 {
     class Program
     {
@@ -20,10 +20,9 @@ namespace Student
         /// 3. doi danh sach sinh vien tu mang qua Lít
         /// 4. Viet 1 person lam lop cha cho lop Student
         /// </summary>
-        static Student[] studentList;
+        static List<Student> studentList;
         static void Main(string[] args)
         {
-            Console.Write("Number of Student = ");
             //lay so luong sinh vien do nguoi dung nhap
             //ctrl + k + c: comment
             //ctrl + k + u: uncomment
@@ -37,11 +36,21 @@ namespace Student
             
             InputStudentList(numOfStudent);
             Console.Write("Danh sach sinh vien: ");
-            OutputStudentList();
+            OutputStudentList(studentList);
             //dung man hinh de xem ket qua
-            Console.Write("Danh sach sinh vien CNTT: ");
+            Console.WriteLine("Danh sach sinh vien CNTT: ");
             OutputStudentITList();
+            Console.WriteLine("Nhập khoa cần xuất DS sinh viên: ");
+            string faculty = Console.ReadLine();
+            List<Student> studentSearchResult = SearchFaculty(faculty);
+            Console.WriteLine("Danh sach sinh vien thuoc Khoa {0}", faculty);
+            OutputStudentList(studentSearchResult);
             Console.ReadKey();
+        }
+
+        private static List<Student> SearchFaculty(string faculty)
+        {
+            return studentList.Where(s => s.Faculty.ToLower() == faculty.ToLower()).ToList();
         }
 
         private static void OutputStudentITList()
@@ -58,10 +67,10 @@ namespace Student
             }
         }
 
-        private static void OutputStudentList()
+        private static void OutputStudentList(List<Student> listStudent)
         {
             // lap tung phan tu cua danh sach va in thong tin
-            foreach (Student item in studentList)
+            foreach (Student item in listStudent)
 
             {
                 Console.WriteLine("--------");
@@ -73,18 +82,14 @@ namespace Student
 
         private static void InputStudentList(int numOfStudent)
         {
-            //tao mang danh sach sinh vien
-            studentList = new Student[numOfStudent];
+            studentList = new List<Student>();
             Student student;
             for (int i = 0; i < numOfStudent; i++)
             {
                 student = new Student();
                 student.Input();
-                //dua doi tuong vao mang
-
-                studentList[i] = student;
+                studentList.Add(student);
             }
         }
-        
     }
 }
