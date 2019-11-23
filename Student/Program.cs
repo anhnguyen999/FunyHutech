@@ -39,12 +39,11 @@ namespace Student
             Console.Write("Danh sach sinh vien: ");
             OutputStudentList(studentList);
             //dung man hinh de xem ket qua
-            Console.WriteLine("Danh sach sinh vien CNTT: ");
-            
+            Console.WriteLine("Danh sach sinh vien CNTT: ");    
             Console.WriteLine("Nhap khoa can xuat danh sach sinh vien: ");
             string faculty = Console.ReadLine();
             List <Student> studentSearchResult = SearchFucalty(faculty);
-            Console.WriteLine("Danh sach sinh vien thuoc khoa {0},faculty ");
+            Console.WriteLine("Danh sach sinh vien thuoc khoa {0} ",faculty);
             OutputStudentList(studentSearchResult);
             Console.ReadKey();
         }
@@ -52,21 +51,6 @@ namespace Student
         {
             return studentList.Where(s => s.Faculty.ToLower() == faculty.ToLower()).ToList();
         }
-
-        private static void OutputStudentITList()
-        {
-            //danh sach SV IT hjjjj
-            foreach (Student item in studentList)
-            {
-                if(string.Compare(item.Faculty,"IT",true)==0)
-                {
-                    Console.WriteLine("--------");
-                    Console.WriteLine("ID: {0}\n FullName: {1}\n Mark: {2}\nFaculty: {3}", item.StudentID, item.FullName, item.Mark, item.Faculty);
-                    Console.WriteLine("--------");
-                }
-            }
-        }
-
         private static void OutputStudentList(List<Student> studentList)
         {
             // lap tung phan tu cua danh sach va in thong tin
