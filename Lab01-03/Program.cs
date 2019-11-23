@@ -19,13 +19,15 @@ namespace Lab01_03
                 Console.Write("Input Number = ");
 
             } while (!int.TryParse(Console.ReadLine(), out num));
-            Console.WriteLine("=====INPUT LIST=====");
+            Console.WriteLine("=======INPUT LIST=======");
             InputList(num);
-            Console.WriteLine("\n=====SHOW LIST=====");
+            Console.WriteLine("\n=======SHOW LIST=======");
             ShowList(personList);
-            Console.WriteLine("=====THE BILL 9/2019=====");
+            Console.WriteLine("=======THE BILL 9/2019=======");
             ShowBill();
             ShowTotalKW();
+            Console.WriteLine("=======SHOW TOTAL MONEY OF MEDIUM CODE SEARCH========");
+            SearchIDToShow();
             //dừng màn hỉnh để xem kết quả
             Console.ReadKey();
         }
@@ -79,24 +81,38 @@ namespace Lab01_03
             }
         }
         //SHOW BILL 9/2019 (2 CUSTOMER)
-        public static List<Person> SearchBill(DateTime time)
-        {
-            return personList.Where(p => p.Time == 9/2019).ToList();
-        }
         public static void ShowBill()
         {
-            foreach (Person pr in personList)
+            List<Person> listKQ = personList.Where(p => p.Time.Month == 9 && p.Time.Year == 2019).ToList();
+            if (listKQ.Count() > 0)
             {
-                if (DateTime.Compare(pr.Time, 9/2019, true) == 0)
-                {
-
-                }
+                ShowList(listKQ);
+            }
+            else
+            {
+                Console.WriteLine("There are not bill 9/2019!");
             }
         }
         //SHOW TOTAL KW NUMBER
         public static void ShowTotalKW()
         {
             Console.WriteLine("Total KW Number Of VN Customer: {0}", sum);
+        }
+        //ENTER CODE TO SEARCH. SHOW TOTAL MONEY OF MEDIUM CODE SEARCH
+        public static void SearchIDToShow()
+        {
+            string IDs;
+            Console.Write("ID to Search: ");
+            IDs = Console.ReadLine();
+            List<Person> listKQ2 = personList.Where(p => p.ID == IDs).ToList();
+            if (listKQ2.Count() > 0)
+            {
+                ShowList(listKQ2);
+            }
+            else
+            {
+                Console.WriteLine("No Code To Find!");
+            }
         }
     }
 }
