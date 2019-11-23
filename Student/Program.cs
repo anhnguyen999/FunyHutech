@@ -20,7 +20,7 @@ namespace Student
         /// 3. doi danh sach sinh vien tu mang qua Lít
         /// 4. Viet 1 person lam lop cha cho lop Student
         /// </summary>
-        static Student[] studentList;
+        static List<Student> studentList;
         static void Main(string[] args)
         {
             Console.Write("Number of Student = ");
@@ -57,12 +57,10 @@ namespace Student
                 }
             }
         }
-
         private static void OutputStudentList()
         {
             // lap tung phan tu cua danh sach va in thong tin
             foreach (Student item in studentList)
-
             {
                 Console.WriteLine("--------");
                 Console.WriteLine("ID: {0}\n FullName: {1}\n Mark: {2}\nFaculty: {3}",item.StudentID,item.FullName,item.Mark,item.Faculty);
@@ -70,19 +68,17 @@ namespace Student
 
             }
         }
-
         private static void InputStudentList(int numOfStudent)
         {
             //tao mang danh sach sinh vien
-            studentList = new Student[numOfStudent];
+            studentList = new List<Student>();
             Student student;
             for (int i = 0; i < numOfStudent; i++)
             {
                 student = new Student();
                 student.Input();
                 //dua doi tuong vao mang
-
-                studentList[i] = student;
+                studentList.Add( student );
             }
         }
         
