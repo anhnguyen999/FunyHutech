@@ -159,6 +159,7 @@ namespace Lab01_03
                         break;
                 }
             } while (choose != 0);
+            Console.ReadKey();
         }
         private static void OutputCustomerVNList(List<CustomerVN> customerVNList)
         {
