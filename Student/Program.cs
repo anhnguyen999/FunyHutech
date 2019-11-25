@@ -5,9 +5,9 @@ using System.Text;
 using System.Threading.Tasks;
 
         /// <summary>
-        /// Duong Thanh Toan
-        /// Truong Thanh Tuyen
-        /// Tran Thi Anh Thu
+        /// Nguyen Truong Thanh
+        /// Phan Minh Tuan
+        /// Phan Minh Tuan
         /// </summary>
 namespace StudentApp
 {
