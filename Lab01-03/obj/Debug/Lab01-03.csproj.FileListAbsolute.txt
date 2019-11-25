@@ -1,0 +1,6 @@
+D:\2_cs\17DTHJA3\Lab01-03\bin\Debug\Lab01-03.exe.config
+D:\2_cs\17DTHJA3\Lab01-03\bin\Debug\Lab01-03.exe
+D:\2_cs\17DTHJA3\Lab01-03\bin\Debug\Lab01-03.pdb
+D:\2_cs\17DTHJA3\Lab01-03\obj\Debug\Lab01-03.csprojAssemblyReference.cache
+D:\2_cs\17DTHJA3\Lab01-03\obj\Debug\Lab01-03.exe
+D:\2_cs\17DTHJA3\Lab01-03\obj\Debug\Lab01-03.pdb
