@@ -48,20 +48,23 @@ namespace chuong_trinh_may_tinh
             txtKetQua.Text = ketQua.ToString();
         }
 
-        private void txtsoA_KeyPress(object sender, KeyPressEventArgs e)
+        private void txtNumber_KeyPress(object sender, KeyPressEventArgs e)
         {
-            if (!Char.IsDigit(e.KeyChar) && !(e.KeyChar == 8))
+            TextBox txtNumber = (TextBox)sender;
+            if (!(char.IsDigit(e.KeyChar) || e.KeyChar == (char)Keys.Back || e.KeyChar == '.'))
             {
                 e.Handled = true;
+                errorCheckNumber.SetError(txtNumber, "khong duoc nhap chu vao khoang trong");
+            }
+            else
+            {
+                errorCheckNumber.SetError(txtNumber, null);
             }
         }
 
-        private void txtsoB_KeyPress(object sender, KeyPressEventArgs e)
+        private void txtKetQua_TextChanged(object sender, EventArgs e)
         {
-            if (!Char.IsDigit(e.KeyChar) && !(e.KeyChar == 8))
-            {
-                e.Handled = true;
-            }
+
         }
     }
 }

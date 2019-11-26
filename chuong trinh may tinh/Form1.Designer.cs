@@ -40,10 +40,8 @@
             this.txtsoB = new System.Windows.Forms.TextBox();
             this.txtKetQua = new System.Windows.Forms.TextBox();
             this.label4 = new System.Windows.Forms.Label();
-            this.errorProvider1 = new System.Windows.Forms.ErrorProvider(this.components);
-            this.errorProvider2 = new System.Windows.Forms.ErrorProvider(this.components);
-            ((System.ComponentModel.ISupportInitialize)(this.errorProvider1)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.errorProvider2)).BeginInit();
+            this.errorCheckNumber = new System.Windows.Forms.ErrorProvider(this.components);
+            ((System.ComponentModel.ISupportInitialize)(this.errorCheckNumber)).BeginInit();
             this.SuspendLayout();
             // 
             // label1
@@ -127,7 +125,7 @@
             this.txtsoA.Name = "txtsoA";
             this.txtsoA.Size = new System.Drawing.Size(410, 30);
             this.txtsoA.TabIndex = 6;
-            this.txtsoA.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.txtsoA_KeyPress);
+            this.txtsoA.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.txtNumber_KeyPress);
             // 
             // txtsoB
             // 
@@ -136,7 +134,7 @@
             this.txtsoB.Name = "txtsoB";
             this.txtsoB.Size = new System.Drawing.Size(410, 30);
             this.txtsoB.TabIndex = 6;
-            this.txtsoB.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.txtsoB_KeyPress);
+            this.txtsoB.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.txtNumber_KeyPress);
             // 
             // txtKetQua
             // 
@@ -145,6 +143,7 @@
             this.txtKetQua.Name = "txtKetQua";
             this.txtKetQua.Size = new System.Drawing.Size(315, 30);
             this.txtKetQua.TabIndex = 6;
+            this.txtKetQua.TextChanged += new System.EventHandler(this.txtKetQua_TextChanged);
             // 
             // label4
             // 
@@ -155,13 +154,9 @@
             this.label4.TabIndex = 4;
             this.label4.Text = "KET QUA";
             // 
-            // errorProvider1
+            // errorCheckNumber
             // 
-            this.errorProvider1.ContainerControl = this;
-            // 
-            // errorProvider2
-            // 
-            this.errorProvider2.ContainerControl = this;
+            this.errorCheckNumber.ContainerControl = this;
             // 
             // Form1
             // 
@@ -182,8 +177,7 @@
             this.Controls.Add(this.label1);
             this.Name = "Form1";
             this.Text = "Form1";
-            ((System.ComponentModel.ISupportInitialize)(this.errorProvider1)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.errorProvider2)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.errorCheckNumber)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -201,8 +195,7 @@
         private System.Windows.Forms.TextBox txtsoB;
         private System.Windows.Forms.TextBox txtKetQua;
         private System.Windows.Forms.Label label4;
-        private System.Windows.Forms.ErrorProvider errorProvider1;
-        private System.Windows.Forms.ErrorProvider errorProvider2;
+        private System.Windows.Forms.ErrorProvider errorCheckNumber;
     }
 }
 
