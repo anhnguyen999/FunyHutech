@@ -15,6 +15,7 @@ namespace UngDungMayTinh
         public Form1()
         {
             InitializeComponent();
+            // 123
         }
 
         private void BtnPhepTinh_Click(object sender, EventArgs e)
