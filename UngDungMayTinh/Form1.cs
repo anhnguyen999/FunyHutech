@@ -61,15 +61,28 @@ namespace UngDungMayTinh
                 default:
                     break;
             }
+
             txtKetQua.Text = KQ.ToString();
         }
 
         private void txtSoA_KeyPress(object sender, KeyPressEventArgs e)
         {
-            if (!Char.IsDigit(e.KeyChar) && !(e.KeyChar == 8))
+
+        }
+
+        private void TxtNumber_KeyPress(object sender, KeyPressEventArgs e)
+        {
+            TextBox txtNumber = (TextBox)sender;
+            if(!(char.IsDigit(e.KeyChar) ||  e.KeyChar ==(char)Keys.Back || e.KeyChar == '.'))
             {
                 e.Handled = true;
+                errSoA.SetError(txtSoA, "Khong nhan duoc chu hoac khoang trang");
             }
+            else
+            {
+                errSoA.SetError(txtSoA, null);
+            }
+
         }
     }
 }

@@ -74,7 +74,7 @@
             this.txtSoA.Size = new System.Drawing.Size(333, 30);
             this.txtSoA.TabIndex = 3;
             this.txtSoA.TextChanged += new System.EventHandler(this.textBox1_TextChanged);
-            this.txtSoA.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.txtSoA_KeyPress);
+            this.txtSoA.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.TxtNumber_KeyPress);
             // 
             // label2
             // 
@@ -108,6 +108,7 @@
             this.txtSoB.Size = new System.Drawing.Size(333, 30);
             this.txtSoB.TabIndex = 3;
             this.txtSoB.TextChanged += new System.EventHandler(this.textBox1_TextChanged);
+            this.txtSoB.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.TxtNumber_KeyPress);
             // 
             // btnPhepTru
             // 
