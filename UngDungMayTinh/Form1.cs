@@ -52,6 +52,7 @@ namespace UngDungMayTinh
             if (!(char.IsDigit(e.KeyChar) || e.KeyChar == (char)Keys.Back || e.KeyChar == '.'))
             {
                 e.Handled = true;
+                //
             }
         }
     }
