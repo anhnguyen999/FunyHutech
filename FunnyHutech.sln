@@ -12,6 +12,8 @@ Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Bai Tap", "Bai Tap", "{A67D
 		F:\Hutech\Nam Hoc 2019 - 2020\Hoc Ky 1\Lab LapTrinhWindows HK1B - 2019 2020\Lab01-LapTrinhHuongDoiTuongUngdungConsole.pdf = F:\Hutech\Nam Hoc 2019 - 2020\Hoc Ky 1\Lab LapTrinhWindows HK1B - 2019 2020\Lab01-LapTrinhHuongDoiTuongUngdungConsole.pdf
 	EndProjectSection
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "UngDungMayTinh", "UngDungMayTinh\UngDungMayTinh.csproj", "{F5C0D851-7818-4600-81CD-088DA4EEC4DE}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -26,6 +28,10 @@ Global
 		{A191E2D9-C577-469B-A6F2-122CF1095901}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{A191E2D9-C577-469B-A6F2-122CF1095901}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{A191E2D9-C577-469B-A6F2-122CF1095901}.Release|Any CPU.Build.0 = Release|Any CPU
+		{F5C0D851-7818-4600-81CD-088DA4EEC4DE}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{F5C0D851-7818-4600-81CD-088DA4EEC4DE}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{F5C0D851-7818-4600-81CD-088DA4EEC4DE}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{F5C0D851-7818-4600-81CD-088DA4EEC4DE}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
