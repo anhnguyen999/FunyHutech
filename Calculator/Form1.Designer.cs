@@ -52,7 +52,7 @@
             this.lblNumber1.Font = new System.Drawing.Font("Microsoft Sans Serif", 11F);
             this.lblNumber1.Location = new System.Drawing.Point(12, 77);
             this.lblNumber1.Name = "lblNumber1";
-            this.lblNumber1.Size = new System.Drawing.Size(73, 18);
+            this.lblNumber1.Size = new System.Drawing.Size(94, 24);
             this.lblNumber1.TabIndex = 0;
             this.lblNumber1.Text = "Number 1";
             // 
@@ -63,7 +63,7 @@
             this.label2.Font = new System.Drawing.Font("Microsoft Sans Serif", 20F);
             this.label2.Location = new System.Drawing.Point(29, 9);
             this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(345, 31);
+            this.label2.Size = new System.Drawing.Size(433, 39);
             this.label2.TabIndex = 1;
             this.label2.Text = "CALCULATOR PROGRAM";
             // 
@@ -73,7 +73,7 @@
             this.lblNumber2.Font = new System.Drawing.Font("Microsoft Sans Serif", 11F);
             this.lblNumber2.Location = new System.Drawing.Point(12, 134);
             this.lblNumber2.Name = "lblNumber2";
-            this.lblNumber2.Size = new System.Drawing.Size(73, 18);
+            this.lblNumber2.Size = new System.Drawing.Size(94, 24);
             this.lblNumber2.TabIndex = 2;
             this.lblNumber2.Text = "Number 2";
             // 
@@ -83,7 +83,7 @@
             this.lblResult.Font = new System.Drawing.Font("Microsoft Sans Serif", 11F);
             this.lblResult.Location = new System.Drawing.Point(44, 307);
             this.lblResult.Name = "lblResult";
-            this.lblResult.Size = new System.Drawing.Size(50, 18);
+            this.lblResult.Size = new System.Drawing.Size(62, 24);
             this.lblResult.TabIndex = 3;
             this.lblResult.Text = "Result";
             // 
@@ -92,7 +92,7 @@
             this.txtNumber1.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F);
             this.txtNumber1.Location = new System.Drawing.Point(116, 76);
             this.txtNumber1.Name = "txtNumber1";
-            this.txtNumber1.Size = new System.Drawing.Size(346, 26);
+            this.txtNumber1.Size = new System.Drawing.Size(346, 30);
             this.txtNumber1.TabIndex = 4;
             // 
             // txtNumber2
@@ -100,7 +100,7 @@
             this.txtNumber2.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F);
             this.txtNumber2.Location = new System.Drawing.Point(116, 134);
             this.txtNumber2.Name = "txtNumber2";
-            this.txtNumber2.Size = new System.Drawing.Size(346, 26);
+            this.txtNumber2.Size = new System.Drawing.Size(346, 30);
             this.txtNumber2.TabIndex = 5;
             // 
             // txtResult
@@ -108,7 +108,7 @@
             this.txtResult.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F);
             this.txtResult.Location = new System.Drawing.Point(116, 302);
             this.txtResult.Name = "txtResult";
-            this.txtResult.Size = new System.Drawing.Size(346, 26);
+            this.txtResult.Size = new System.Drawing.Size(346, 30);
             this.txtResult.TabIndex = 6;
             // 
             // btnAdd

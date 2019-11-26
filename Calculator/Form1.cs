@@ -19,7 +19,7 @@ namespace Calculator
             //Xác định nút đang được bấm là nút nào dựa vào tên
             string calculator = btnCalculator.Name;
             //Sử dụng cấu trúc lựa chọn để xác định kết quả
-            double result = 0;
+            double result = double.Parse(txtResult.Text);
             double number1 = double.Parse(txtNumber1.Text);
             double number2 = double.Parse(txtNumber2.Text);
             switch (calculator)
@@ -41,7 +41,14 @@ namespace Calculator
             }
             txtResult.Text = result.ToString();
         }
-        //private void txtNumber1_
+        private void TxtSoA_KeyPress(object sender, KeyPressEventArgs e)
+        {
+            if (!(char.IsDigit(e.KeyChar) || e.KeyChar == (char)Keys.Back || e.KeyChar == '.'))
+            {
+                e.Handled = true;
+                //errCheckNumber.SetError(errNumber1);
+            }
+        }
         /*private void btnAdd_Click(object sender, EventArgs e)
         {
             
