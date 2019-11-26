@@ -47,12 +47,17 @@ namespace UngDungMayTinh
             txtKetQua.Text = ketQua.ToString();
         }
 
-        private void TxtSoA_KeyPress(object sender, KeyPressEventArgs e)
+        private void txtNumber_KeyPress(object sender, KeyPressEventArgs e)
         {
+            TextBox txtNumber = (TextBox)sender;
             if (!(char.IsDigit(e.KeyChar) || e.KeyChar == (char)Keys.Back || e.KeyChar == '.'))
             {
                 e.Handled = true;
-                //
+                errorCheckNumber.SetError(txtSoA, "Khong duoc nhap chu hoac khoang trong");
+            }
+            else
+            {
+                errorCheckNumber.SetError(txtSoA, null);
             }
         }
     }

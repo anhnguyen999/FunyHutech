@@ -40,9 +40,9 @@
             this.btnPhepChia = new System.Windows.Forms.Button();
             this.txtKetQua = new System.Windows.Forms.TextBox();
             this.label4 = new System.Windows.Forms.Label();
-            this.errSoA = new System.Windows.Forms.ErrorProvider(this.components);
+            this.errorCheckNumber = new System.Windows.Forms.ErrorProvider(this.components);
             label1 = new System.Windows.Forms.Label();
-            ((System.ComponentModel.ISupportInitialize)(this.errSoA)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.errorCheckNumber)).BeginInit();
             this.SuspendLayout();
             // 
             // label1
@@ -74,7 +74,7 @@
             this.txtSoA.Name = "txtSoA";
             this.txtSoA.Size = new System.Drawing.Size(366, 35);
             this.txtSoA.TabIndex = 2;
-            this.txtSoA.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.TxtSoA_KeyPress);
+            this.txtSoA.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.txtNumber_KeyPress);
             // 
             // label2
             // 
@@ -103,6 +103,7 @@
             this.txtSoB.Name = "txtSoB";
             this.txtSoB.Size = new System.Drawing.Size(366, 35);
             this.txtSoB.TabIndex = 4;
+            this.txtSoB.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.txtNumber_KeyPress);
             // 
             // btnPhepTru
             // 
@@ -155,9 +156,9 @@
             this.label4.TabIndex = 5;
             this.label4.Text = "KẾT QUẢ";
             // 
-            // errSoA
+            // errorCheckNumber
             // 
-            this.errSoA.ContainerControl = this;
+            this.errorCheckNumber.ContainerControl = this;
             // 
             // Form1
             // 
@@ -177,7 +178,7 @@
             this.Controls.Add(this.btnPhepCong);
             this.Name = "Form1";
             this.Text = "Form1";
-            ((System.ComponentModel.ISupportInitialize)(this.errSoA)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.errorCheckNumber)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -195,7 +196,7 @@
         private System.Windows.Forms.Button btnPhepChia;
         private System.Windows.Forms.TextBox txtKetQua;
         private System.Windows.Forms.Label label4;
-        private System.Windows.Forms.ErrorProvider errSoA;
+        private System.Windows.Forms.ErrorProvider errorCheckNumber;
     }
 }
 
