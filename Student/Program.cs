@@ -9,9 +9,16 @@ using System.Threading.Tasks;
 /// </summary>
 namespace Student
 {
+    /// <summary>
+    /// Bai tap: 
+    /// 1. Hay xuat ra danh sach tat ca sinh vien Khoa CNTT
+    /// 2. Viet ham xuat trong student
+    /// 3. Doi danh sach sinh vien tu mang sang LIST
+    /// 4. Viet mot lop person làm lớp cha cho lớp student (đưa thuộc tính FullName và Faculty sang lớp person)
+    /// </summary>
     class Program
     {
-        static Student[] studentList;
+        static List<Student> studentList;
         static void Main(string[] args)
         {
             //lay so luong sinh vien do nguoi dung nhap
@@ -45,23 +52,15 @@ namespace Student
         private static void InputStudentList(int numOfStudent)
         {
             //tao mang danh sach sinh vien
-            studentList = new Student[numOfStudent];
+            studentList = new List<Student>();
             Student student;
             for (int i = 0; i < numOfStudent; i++)
             {
                 student = new Student();
-                Console.Write("ID = ");
-                student.StudentID = int.Parse(Console.ReadLine());
-                Console.Write("FullName = ");
-                student.FullName = Console.ReadLine();
-                Console.Write("Mark = ");
-                student.Mark = float.Parse(Console.ReadLine());
-                Console.Write("Faculty = ");
-                student.Faculty = Console.ReadLine();
-                Console.WriteLine("---End---");
+                student.Input();
                 //tuong tu nhap cho cac thuoc tinh khac
                 //dua doi tuong vao mang
-                studentList[i] = student;
+                studentList.Add(student);
             }
         }
     }
