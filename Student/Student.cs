@@ -6,6 +6,10 @@ using System.Threading.Tasks;
 
 namespace StudentApp
 {
+
+    //Nguyen Hoang Tu
+    //Nguyen Hoang Phuc
+    //Nguyen Thai Hung Vuong
     class Student : Person
     {
         public int StudentID { get; set; }
