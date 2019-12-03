@@ -47,11 +47,18 @@ namespace UngDungMayTinh
             txtKetQua.Text = ketQua.ToString();
         }
 
-        private void TxtSoA_KeyPress(object sender, KeyPressEventArgs e)
+        private void TxtNumber_KeyPress(object sender, KeyPressEventArgs e)
         {
-            if (!(char.IsDigit(e.KeyChar) || e.KeyChar == (char)Keys.Back || e.KeyChar == '.'))
+            TextBox txtNumber = (TextBox)sender;
+            if (!char.IsControl(e.KeyChar) && !char.IsDigit(e.KeyChar) &&
+        (e.KeyChar != '.') || ((e.KeyChar == '.') && ((sender as TextBox).Text.IndexOf('.') > -1)))
             {
                 e.Handled = true;
+                errorCheckNumber.SetError(txtNumber, "Không được nhập chữ hoặc khoảng trắng");
+            }
+            else
+            {
+                errorCheckNumber.SetError(txtNumber, null);
             }
         }
     }

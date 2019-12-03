@@ -40,9 +40,10 @@
             this.btnPhepChia = new System.Windows.Forms.Button();
             this.txtKetQua = new System.Windows.Forms.TextBox();
             this.label4 = new System.Windows.Forms.Label();
-            this.errSoA = new System.Windows.Forms.ErrorProvider(this.components);
+            this.errorCheckNumber = new System.Windows.Forms.ErrorProvider(this.components);
+            this.button1 = new System.Windows.Forms.Button();
             label1 = new System.Windows.Forms.Label();
-            ((System.ComponentModel.ISupportInitialize)(this.errSoA)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.errorCheckNumber)).BeginInit();
             this.SuspendLayout();
             // 
             // label1
@@ -74,7 +75,7 @@
             this.txtSoA.Name = "txtSoA";
             this.txtSoA.Size = new System.Drawing.Size(366, 35);
             this.txtSoA.TabIndex = 2;
-            this.txtSoA.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.TxtSoA_KeyPress);
+            this.txtSoA.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.TxtNumber_KeyPress);
             // 
             // label2
             // 
@@ -103,6 +104,7 @@
             this.txtSoB.Name = "txtSoB";
             this.txtSoB.Size = new System.Drawing.Size(366, 35);
             this.txtSoB.TabIndex = 4;
+            this.txtSoB.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.TxtNumber_KeyPress);
             // 
             // btnPhepTru
             // 
@@ -155,15 +157,25 @@
             this.label4.TabIndex = 5;
             this.label4.Text = "KẾT QUẢ";
             // 
-            // errSoA
+            // errorCheckNumber
             // 
-            this.errSoA.ContainerControl = this;
+            this.errorCheckNumber.ContainerControl = this;
+            // 
+            // button1
+            // 
+            this.button1.Location = new System.Drawing.Point(49, 260);
+            this.button1.Name = "button1";
+            this.button1.Size = new System.Drawing.Size(75, 23);
+            this.button1.TabIndex = 6;
+            this.button1.Text = "button1";
+            this.button1.UseVisualStyleBackColor = true;
             // 
             // Form1
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(9F, 20F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(800, 450);
+            this.Controls.Add(this.button1);
             this.Controls.Add(this.label4);
             this.Controls.Add(this.label3);
             this.Controls.Add(this.txtKetQua);
@@ -177,7 +189,7 @@
             this.Controls.Add(this.btnPhepCong);
             this.Name = "Form1";
             this.Text = "Form1";
-            ((System.ComponentModel.ISupportInitialize)(this.errSoA)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.errorCheckNumber)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -195,7 +207,8 @@
         private System.Windows.Forms.Button btnPhepChia;
         private System.Windows.Forms.TextBox txtKetQua;
         private System.Windows.Forms.Label label4;
-        private System.Windows.Forms.ErrorProvider errSoA;
+        private System.Windows.Forms.ErrorProvider errorCheckNumber;
+        private System.Windows.Forms.Button button1;
     }
 }
 
