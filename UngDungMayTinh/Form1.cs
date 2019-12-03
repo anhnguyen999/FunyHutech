@@ -12,6 +12,7 @@ namespace UngDungMayTinh
 {
     public partial class Form1 : Form
     {
+        string mgsError ;
         public Form1()
         {
             InitializeComponent();
@@ -19,15 +20,19 @@ namespace UngDungMayTinh
 
         private void BtnPhepTinh_Click(object sender, EventArgs e)
         {
-            
+            double soA ;
+            double soB ;
+            if(!validateInputNumber(out soA, out soB))
+            {
+                MessageBox.Show(mgsError, "Thong bao",MessageBoxButtons.OK,MessageBoxIcon.Error);
+                return;
+            }
             //Chuyen sender thanh button
             Button btnPhepTinh = (Button)sender;
             //xac dinh nut dang duoc bam là nút nào dựa vào tên
             string phepTinh = btnPhepTinh.Name;
             //Sử dụng cấu trúc lựa chọn để xác định kết quả
             double ketQua = 0;
-            double soA = double.Parse(txtSoA.Text);
-            double soB = double.Parse(txtSoB.Text);
             switch (phepTinh)
             {
                 case "btnPhepCong":
@@ -61,6 +66,21 @@ namespace UngDungMayTinh
             {
                 errorCheckNumber.SetError(txtNumber, null);
             }
+        }
+        private bool validateInputNumber(out double soA, out double soB)
+        {
+             mgsError = "";
+            if(!double.TryParse(txtSoA.Text,out soA))
+            {
+                mgsError = "So A khong hop le";
+            }
+            if(!double.TryParse(txtSoB.Text,out soB))
+            {
+                mgsError += "\nSo B khong hop le";
+            }
+            if(mgsError == "")
+                return true;
+            return false;
         }
     }
 }
