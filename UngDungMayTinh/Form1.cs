@@ -19,6 +19,7 @@ namespace UngDungMayTinh
 
         private void BtnPhepTinh_Click(object sender, EventArgs e)
         {
+            
             //Chuyen sender thanh button
             Button btnPhepTinh = (Button)sender;
             //xac dinh nut dang duoc bam là nút nào dựa vào tên
