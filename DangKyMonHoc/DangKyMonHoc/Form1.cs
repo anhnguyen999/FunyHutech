@@ -61,7 +61,7 @@ namespace DangKyMonHoc
                 try
                 {
                     lB_ChonMonHoc.Items.Add(lB_Dich.SelectedItem);
-                    lB_Dich.Items.Remove(lB_ChonMonHoc.SelectedItem);
+                    //lB_Dich.Items.Remove(lB_ChonMonHoc.SelectedItem);
                 }
                 catch (ArgumentNullException nex)
 
@@ -86,7 +86,23 @@ namespace DangKyMonHoc
 
         private void lB_Dich_SelectedIndexChanged(object sender, EventArgs e)
         {
-            lB_Dich.Items.Remove(lB_ChonMonHoc.SelectedItem);
+            {
+                try
+                {
+                    //lB_ChonMonHoc.Items.Add(lB_Dich.SelectedItem);
+                    lB_Dich.Items.Remove(lB_ChonMonHoc.SelectedItem);
+                }
+                catch (ArgumentNullException nex)
+
+                {
+                    MessageBox.Show("Bạn chưa chọn môn học nào!!!");
+                }
+                catch (Exception ex)
+                {
+                    MessageBox.Show(ex.Message);
+                }
+            }
+
         }
 
         private void listBox2_SelectedIndexChanged(object sender, EventArgs e)
