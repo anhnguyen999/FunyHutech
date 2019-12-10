@@ -19,6 +19,8 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "DTO_QuanLySinhVien", "DTO_Q
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ConnectSQLServer", "ConnectSQLServer\ConnectSQLServer.csproj", "{3222D604-4EF2-47AF-A825-0471A0A09976}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "GUI_QuanLySinhVien", "GUI_QuanLySinhVien\GUI_QuanLySinhVien.csproj", "{F9694892-AAA0-4AC2-813A-2CBF346FFBEB}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -57,6 +59,10 @@ Global
 		{3222D604-4EF2-47AF-A825-0471A0A09976}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{3222D604-4EF2-47AF-A825-0471A0A09976}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{3222D604-4EF2-47AF-A825-0471A0A09976}.Release|Any CPU.Build.0 = Release|Any CPU
+		{F9694892-AAA0-4AC2-813A-2CBF346FFBEB}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{F9694892-AAA0-4AC2-813A-2CBF346FFBEB}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{F9694892-AAA0-4AC2-813A-2CBF346FFBEB}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{F9694892-AAA0-4AC2-813A-2CBF346FFBEB}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
