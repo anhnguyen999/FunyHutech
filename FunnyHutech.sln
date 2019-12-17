@@ -3,14 +3,6 @@ Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio Version 16
 VisualStudioVersion = 16.0.29215.179
 MinimumVisualStudioVersion = 10.0.40219.1
-Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "FunnyHutech", "FunnyHutech\FunnyHutech.csproj", "{25917A8F-2B86-4E77-B266-62040B582681}"
-EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Student", "Student\Student.csproj", "{A191E2D9-C577-469B-A6F2-122CF1095901}"
-EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "UngDungMayTinh", "UngDungMayTinh\UngDungMayTinh.csproj", "{A74E87EE-7ED5-44E3-96FD-0243FEF65AC8}"
-EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "DangKyMonHoc", "DangKyMonHoc\DangKyMonHoc.csproj", "{C6B675F2-BBE2-4AAB-8746-7A3A09932EC5}"
-EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "DTO_QuanLySinhVien", "DTO_QuanLySinhVien\DTO_QuanLySinhVien.csproj", "{E87D5C2A-F188-492A-912B-956BA8F0756A}"
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "DAL_QuanLySinhVien", "DAL_QuanLySinhVien\DAL_QuanLySinhVien.csproj", "{EA2A7275-9070-4A83-8782-A5CE3A1286F9}"
@@ -25,22 +17,6 @@ Global
 		Release|Any CPU = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(ProjectConfigurationPlatforms) = postSolution
-		{25917A8F-2B86-4E77-B266-62040B582681}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
-		{25917A8F-2B86-4E77-B266-62040B582681}.Debug|Any CPU.Build.0 = Debug|Any CPU
-		{25917A8F-2B86-4E77-B266-62040B582681}.Release|Any CPU.ActiveCfg = Release|Any CPU
-		{25917A8F-2B86-4E77-B266-62040B582681}.Release|Any CPU.Build.0 = Release|Any CPU
-		{A191E2D9-C577-469B-A6F2-122CF1095901}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
-		{A191E2D9-C577-469B-A6F2-122CF1095901}.Debug|Any CPU.Build.0 = Debug|Any CPU
-		{A191E2D9-C577-469B-A6F2-122CF1095901}.Release|Any CPU.ActiveCfg = Release|Any CPU
-		{A191E2D9-C577-469B-A6F2-122CF1095901}.Release|Any CPU.Build.0 = Release|Any CPU
-		{A74E87EE-7ED5-44E3-96FD-0243FEF65AC8}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
-		{A74E87EE-7ED5-44E3-96FD-0243FEF65AC8}.Debug|Any CPU.Build.0 = Debug|Any CPU
-		{A74E87EE-7ED5-44E3-96FD-0243FEF65AC8}.Release|Any CPU.ActiveCfg = Release|Any CPU
-		{A74E87EE-7ED5-44E3-96FD-0243FEF65AC8}.Release|Any CPU.Build.0 = Release|Any CPU
-		{C6B675F2-BBE2-4AAB-8746-7A3A09932EC5}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
-		{C6B675F2-BBE2-4AAB-8746-7A3A09932EC5}.Debug|Any CPU.Build.0 = Debug|Any CPU
-		{C6B675F2-BBE2-4AAB-8746-7A3A09932EC5}.Release|Any CPU.ActiveCfg = Release|Any CPU
-		{C6B675F2-BBE2-4AAB-8746-7A3A09932EC5}.Release|Any CPU.Build.0 = Release|Any CPU
 		{E87D5C2A-F188-492A-912B-956BA8F0756A}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
 		{E87D5C2A-F188-492A-912B-956BA8F0756A}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{E87D5C2A-F188-492A-912B-956BA8F0756A}.Release|Any CPU.ActiveCfg = Release|Any CPU
