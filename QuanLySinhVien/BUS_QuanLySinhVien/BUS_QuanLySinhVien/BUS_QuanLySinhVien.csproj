@@ -5,7 +5,7 @@
   <PropertyGroup>
     <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
     <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
-    <ProjectGuid>{3DA750DF-4C5B-400F-BC4E-B01C22357216}</ProjectGuid>
+    <ProjectGuid>{B152391B-7602-4FFD-B650-F1945CFACF11}</ProjectGuid>
     <OutputType>Library</OutputType>
     <AppDesignerFolder>Properties</AppDesignerFolder>
     <RootNamespace>BUS_QuanLySinhVien</RootNamespace>
@@ -51,8 +51,18 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="BUS_QuanLySinhVien.cs" />
+    <Compile Include="BUS_ChuyenNganh.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\..\DAL_QuanLySinhVien\DAL_QuanLySinhVien.csproj">
+      <Project>{4ede7fdc-7fe9-409f-a7cd-9878d6fc8476}</Project>
+      <Name>DAL_QuanLySinhVien</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\..\DTO_QuanLySinhVien\DTO_QuanLySinhVien.csproj">
+      <Project>{15f0d8c8-787a-4b3f-8012-00efd0947e0f}</Project>
+      <Name>DTO_QuanLySinhVien</Name>
+    </ProjectReference>
   </ItemGroup>
   <ItemGroup>
     <None Include="App.config" />
