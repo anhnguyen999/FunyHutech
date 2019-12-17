@@ -9,6 +9,9 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 using BUS_QuanLySinhVien;
+/// <summary>
+/// Code View
+/// </summary>
 
 namespace GUI_QuanLySinhVien
 {
