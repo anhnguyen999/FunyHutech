@@ -7,25 +7,31 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using BUS_QuanLySinhVien;
 
 namespace GUI_QuanLySinhVien
 {
     public partial class frmQuanLySinhVien : Form
     {
+        BUS_ChuyenNganh bus_ChuyenNganh = new BUS_ChuyenNganh();
         public frmQuanLySinhVien()
         {
             InitializeComponent();
             ControlConfig();
         }
-
         private void ControlConfig()
         {
-            throw new NotImplementedException();
+            cbChuyenNganh.DisplayMember = "TenChuyenNganh";
+            cbChuyenNganh.ValueMember = "MaChuyenNganh";
         }
 
-        public void FrmQuanLySinhVien_Load(object sender, EventArgs e)
+        private void FrmQuanLySinhVien_Load(object sender, EventArgs e)
         {
             LoadChuyenNganh();
+        }
+        private void LoadChuyenNganh()
+        {
+            cbChuyenNganh.DataSource = bus_ChuyenNganh.GetChuyenNganh();
         }
     }
 }
