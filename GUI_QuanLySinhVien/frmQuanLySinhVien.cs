@@ -13,6 +13,9 @@ namespace GUI_QuanLySinhVien
 {
     public partial class frmQuanLySinhVien : Form
     {
+        //TRAN SY TAI
+        //LE DUC ANH
+        //NGUYEN DANG KHOI
         BUS_ChuyenNganh bus_ChuyenNganh = new BUS_ChuyenNganh();
         public frmQuanLySinhVien()
         {
