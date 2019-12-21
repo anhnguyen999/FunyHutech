@@ -12,13 +12,14 @@ namespace DAL_QuanLySinhVien
     using System;
     using System.Collections.Generic;
     
-    public partial class tblSystem
+    public partial class ThongTinDangKy
     {
-        public int ID { get; set; }
-        public string SchemaVersion { get; set; }
-        public System.DateTime EnterDTM { get; set; }
-        public string EnterUserID { get; set; }
-        public string LastChgUserID { get; set; }
-        public System.DateTime LastChgDTM { get; set; }
+        public int MaDangKy { get; set; }
+        public Nullable<int> MaMonHoc { get; set; }
+        public string MaSV { get; set; }
+        public Nullable<System.DateTime> ThoiGianDangKy { get; set; }
+    
+        public virtual MonHoc MonHoc { get; set; }
+        public virtual SinhVien SinhVien { get; set; }
     }
 }

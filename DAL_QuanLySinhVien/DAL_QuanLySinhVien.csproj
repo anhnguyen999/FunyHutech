@@ -51,220 +51,62 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="ChuyenNganh.cs">
-      <DependentUpon>QuanLySinhvVien.tt</DependentUpon>
-    </Compile>
-    <Compile Include="DangKyMonHoc.cs">
-      <DependentUpon>QuanLySinhvVien.tt</DependentUpon>
+      <DependentUpon>QuanLySinhVienEntities.tt</DependentUpon>
     </Compile>
     <Compile Include="MonHoc.cs">
-      <DependentUpon>QuanLySinhvVien.tt</DependentUpon>
+      <DependentUpon>QuanLySinhVienEntities.tt</DependentUpon>
     </Compile>
     <Compile Include="Properties\AssemblyInfo.cs" />
-    <Compile Include="QuanLySinhvVien.Context.cs">
+    <Compile Include="QuanLySinhVienEntities.Context.cs">
       <AutoGen>True</AutoGen>
       <DesignTime>True</DesignTime>
-      <DependentUpon>QuanLySinhvVien.Context.tt</DependentUpon>
+      <DependentUpon>QuanLySinhVienEntities.Context.tt</DependentUpon>
     </Compile>
-    <Compile Include="QuanLySinhvVien.cs">
+    <Compile Include="QuanLySinhVienEntities.cs">
       <AutoGen>True</AutoGen>
       <DesignTime>True</DesignTime>
-      <DependentUpon>QuanLySinhvVien.tt</DependentUpon>
+      <DependentUpon>QuanLySinhVienEntities.tt</DependentUpon>
     </Compile>
-    <Compile Include="QuanLySinhvVien.Designer.cs">
+    <Compile Include="QuanLySinhVienEntities.Designer.cs">
       <AutoGen>True</AutoGen>
       <DesignTime>True</DesignTime>
-      <DependentUpon>QuanLySinhvVien.edmx</DependentUpon>
+      <DependentUpon>QuanLySinhVienEntities.edmx</DependentUpon>
     </Compile>
     <Compile Include="SinhVien.cs">
-      <DependentUpon>QuanLySinhvVien.tt</DependentUpon>
+      <DependentUpon>QuanLySinhVienEntities.tt</DependentUpon>
     </Compile>
-    <Compile Include="tblAttribute.cs">
-      <DependentUpon>QuanLySinhvVien.tt</DependentUpon>
+    <Compile Include="sysdiagram.cs">
+      <DependentUpon>QuanLySinhVienEntities.tt</DependentUpon>
     </Compile>
-    <Compile Include="tblAttributeGroup.cs">
-      <DependentUpon>QuanLySinhvVien.tt</DependentUpon>
+    <Compile Include="ThongTinDangKy.cs">
+      <DependentUpon>QuanLySinhVienEntities.tt</DependentUpon>
     </Compile>
-    <Compile Include="tblAttributeGroupDetail.cs">
-      <DependentUpon>QuanLySinhvVien.tt</DependentUpon>
-    </Compile>
-    <Compile Include="tblBRBusinessRule.cs">
-      <DependentUpon>QuanLySinhvVien.tt</DependentUpon>
-    </Compile>
-    <Compile Include="tblBRItem.cs">
-      <DependentUpon>QuanLySinhvVien.tt</DependentUpon>
-    </Compile>
-    <Compile Include="tblBRItemProperty.cs">
-      <DependentUpon>QuanLySinhvVien.tt</DependentUpon>
-    </Compile>
-    <Compile Include="tblBRItemTypeAppliesTo.cs">
-      <DependentUpon>QuanLySinhvVien.tt</DependentUpon>
-    </Compile>
-    <Compile Include="tblBRLogicalOperatorGroup.cs">
-      <DependentUpon>QuanLySinhvVien.tt</DependentUpon>
-    </Compile>
-    <Compile Include="tblBRStatusTransition.cs">
-      <DependentUpon>QuanLySinhvVien.tt</DependentUpon>
-    </Compile>
-    <Compile Include="tblCodeGenInfo.cs">
-      <DependentUpon>QuanLySinhvVien.tt</DependentUpon>
-    </Compile>
-    <Compile Include="tblDataQualityOperationsState.cs">
-      <DependentUpon>QuanLySinhvVien.tt</DependentUpon>
-    </Compile>
-    <Compile Include="tblDBError.cs">
-      <DependentUpon>QuanLySinhvVien.tt</DependentUpon>
-    </Compile>
-    <Compile Include="tblDBUpgradeHistory.cs">
-      <DependentUpon>QuanLySinhvVien.tt</DependentUpon>
-    </Compile>
-    <Compile Include="tblDerivedHierarchy.cs">
-      <DependentUpon>QuanLySinhvVien.tt</DependentUpon>
-    </Compile>
-    <Compile Include="tblDerivedHierarchyDetail.cs">
-      <DependentUpon>QuanLySinhvVien.tt</DependentUpon>
-    </Compile>
-    <Compile Include="tblEntity.cs">
-      <DependentUpon>QuanLySinhvVien.tt</DependentUpon>
-    </Compile>
-    <Compile Include="tblErrorCodesMapping.cs">
-      <DependentUpon>QuanLySinhvVien.tt</DependentUpon>
-    </Compile>
-    <Compile Include="tblEvent.cs">
-      <DependentUpon>QuanLySinhvVien.tt</DependentUpon>
-    </Compile>
-    <Compile Include="tblExternalSystem.cs">
-      <DependentUpon>QuanLySinhvVien.tt</DependentUpon>
-    </Compile>
-    <Compile Include="tblFile.cs">
-      <DependentUpon>QuanLySinhvVien.tt</DependentUpon>
-    </Compile>
-    <Compile Include="tblHierarchy.cs">
-      <DependentUpon>QuanLySinhvVien.tt</DependentUpon>
-    </Compile>
-    <Compile Include="tblIndex.cs">
-      <DependentUpon>QuanLySinhvVien.tt</DependentUpon>
-    </Compile>
-    <Compile Include="tblList.cs">
-      <DependentUpon>QuanLySinhvVien.tt</DependentUpon>
-    </Compile>
-    <Compile Include="tblListRelationship.cs">
-      <DependentUpon>QuanLySinhvVien.tt</DependentUpon>
-    </Compile>
-    <Compile Include="tblListRelationshipType.cs">
-      <DependentUpon>QuanLySinhvVien.tt</DependentUpon>
-    </Compile>
-    <Compile Include="tblLocalizedString.cs">
-      <DependentUpon>QuanLySinhvVien.tt</DependentUpon>
-    </Compile>
-    <Compile Include="tblModel.cs">
-      <DependentUpon>QuanLySinhvVien.tt</DependentUpon>
-    </Compile>
-    <Compile Include="tblModelVersion.cs">
-      <DependentUpon>QuanLySinhvVien.tt</DependentUpon>
-    </Compile>
-    <Compile Include="tblModelVersionFlag.cs">
-      <DependentUpon>QuanLySinhvVien.tt</DependentUpon>
-    </Compile>
-    <Compile Include="tblNotificationQueue.cs">
-      <DependentUpon>QuanLySinhvVien.tt</DependentUpon>
-    </Compile>
-    <Compile Include="tblNotificationUser.cs">
-      <DependentUpon>QuanLySinhvVien.tt</DependentUpon>
-    </Compile>
-    <Compile Include="tblSecurityAccessControl.cs">
-      <DependentUpon>QuanLySinhvVien.tt</DependentUpon>
-    </Compile>
-    <Compile Include="tblSecurityObject.cs">
-      <DependentUpon>QuanLySinhvVien.tt</DependentUpon>
-    </Compile>
-    <Compile Include="tblSecurityPrivilege.cs">
-      <DependentUpon>QuanLySinhvVien.tt</DependentUpon>
-    </Compile>
-    <Compile Include="tblSecurityPrivilegeFunctional.cs">
-      <DependentUpon>QuanLySinhvVien.tt</DependentUpon>
-    </Compile>
-    <Compile Include="tblSecurityRole.cs">
-      <DependentUpon>QuanLySinhvVien.tt</DependentUpon>
-    </Compile>
-    <Compile Include="tblSecurityRoleAccess.cs">
-      <DependentUpon>QuanLySinhvVien.tt</DependentUpon>
-    </Compile>
-    <Compile Include="tblSecurityRoleAccessFunctional.cs">
-      <DependentUpon>QuanLySinhvVien.tt</DependentUpon>
-    </Compile>
-    <Compile Include="tblSecurityRoleAccessMember.cs">
-      <DependentUpon>QuanLySinhvVien.tt</DependentUpon>
-    </Compile>
-    <Compile Include="tblStgBatch.cs">
-      <DependentUpon>QuanLySinhvVien.tt</DependentUpon>
-    </Compile>
-    <Compile Include="tblStgErrorDetail.cs">
-      <DependentUpon>QuanLySinhvVien.tt</DependentUpon>
-    </Compile>
-    <Compile Include="tblSubscriptionView.cs">
-      <DependentUpon>QuanLySinhvVien.tt</DependentUpon>
-    </Compile>
-    <Compile Include="tblSyncRelationship.cs">
-      <DependentUpon>QuanLySinhvVien.tt</DependentUpon>
-    </Compile>
-    <Compile Include="tblSystem.cs">
-      <DependentUpon>QuanLySinhvVien.tt</DependentUpon>
-    </Compile>
-    <Compile Include="tblSystemSetting.cs">
-      <DependentUpon>QuanLySinhvVien.tt</DependentUpon>
-    </Compile>
-    <Compile Include="tblSystemSettingGroup.cs">
-      <DependentUpon>QuanLySinhvVien.tt</DependentUpon>
-    </Compile>
-    <Compile Include="tblUser.cs">
-      <DependentUpon>QuanLySinhvVien.tt</DependentUpon>
-    </Compile>
-    <Compile Include="tblUserGroup.cs">
-      <DependentUpon>QuanLySinhvVien.tt</DependentUpon>
-    </Compile>
-    <Compile Include="tblUserGroupAssignment.cs">
-      <DependentUpon>QuanLySinhvVien.tt</DependentUpon>
-    </Compile>
-    <Compile Include="tblUserPreference.cs">
-      <DependentUpon>QuanLySinhvVien.tt</DependentUpon>
-    </Compile>
-    <Compile Include="tblviwSystemSecurityUserAttribute.cs">
-      <DependentUpon>QuanLySinhvVien.tt</DependentUpon>
-    </Compile>
-    <Compile Include="tblviwSystemSecurityUserMemberType.cs">
-      <DependentUpon>QuanLySinhvVien.tt</DependentUpon>
-    </Compile>
-    <Compile Include="tblviwSystemSecurityUserRole.cs">
-      <DependentUpon>QuanLySinhvVien.tt</DependentUpon>
-    </Compile>
-  </ItemGroup>
-  <ItemGroup>
-    <EntityDeploy Include="QuanLySinhvVien.edmx">
-      <Generator>EntityModelCodeGenerator</Generator>
-      <LastGenOutput>QuanLySinhvVien.Designer.cs</LastGenOutput>
-    </EntityDeploy>
   </ItemGroup>
   <ItemGroup>
     <None Include="App.Config" />
     <None Include="packages.config" />
-    <None Include="QuanLySinhvVien.edmx.diagram">
-      <DependentUpon>QuanLySinhvVien.edmx</DependentUpon>
+    <EntityDeploy Include="QuanLySinhVienEntities.edmx">
+      <Generator>EntityModelCodeGenerator</Generator>
+      <LastGenOutput>QuanLySinhVienEntities.Designer.cs</LastGenOutput>
+    </EntityDeploy>
+    <None Include="QuanLySinhVienEntities.edmx.diagram">
+      <DependentUpon>QuanLySinhVienEntities.edmx</DependentUpon>
     </None>
   </ItemGroup>
   <ItemGroup>
-    <Content Include="QuanLySinhvVien.Context.tt">
-      <Generator>TextTemplatingFileGenerator</Generator>
-      <LastGenOutput>QuanLySinhvVien.Context.cs</LastGenOutput>
-      <DependentUpon>QuanLySinhvVien.edmx</DependentUpon>
-    </Content>
-    <Content Include="QuanLySinhvVien.tt">
-      <Generator>TextTemplatingFileGenerator</Generator>
-      <DependentUpon>QuanLySinhvVien.edmx</DependentUpon>
-      <LastGenOutput>QuanLySinhvVien.cs</LastGenOutput>
-    </Content>
+    <Service Include="{508349B6-6B84-4DF5-91F0-309BEEBAD82D}" />
   </ItemGroup>
   <ItemGroup>
-    <Service Include="{508349B6-6B84-4DF5-91F0-309BEEBAD82D}" />
+    <Content Include="QuanLySinhVienEntities.Context.tt">
+      <Generator>TextTemplatingFileGenerator</Generator>
+      <DependentUpon>QuanLySinhVienEntities.edmx</DependentUpon>
+      <LastGenOutput>QuanLySinhVienEntities.Context.cs</LastGenOutput>
+    </Content>
+    <Content Include="QuanLySinhVienEntities.tt">
+      <Generator>TextTemplatingFileGenerator</Generator>
+      <DependentUpon>QuanLySinhVienEntities.edmx</DependentUpon>
+      <LastGenOutput>QuanLySinhVienEntities.cs</LastGenOutput>
+    </Content>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

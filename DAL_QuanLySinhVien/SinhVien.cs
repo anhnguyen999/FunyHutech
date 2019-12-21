@@ -17,7 +17,7 @@ namespace DAL_QuanLySinhVien
         [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2214:DoNotCallOverridableMethodsInConstructors")]
         public SinhVien()
         {
-            this.DangKyMonHocs = new HashSet<DangKyMonHoc>();
+            this.ThongTinDangKies = new HashSet<ThongTinDangKy>();
         }
     
         public string MaSV { get; set; }
@@ -25,6 +25,6 @@ namespace DAL_QuanLySinhVien
         public Nullable<bool> GioiTinh { get; set; }
     
         [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2227:CollectionPropertiesShouldBeReadOnly")]
-        public virtual ICollection<DangKyMonHoc> DangKyMonHocs { get; set; }
+        public virtual ICollection<ThongTinDangKy> ThongTinDangKies { get; set; }
     }
 }
