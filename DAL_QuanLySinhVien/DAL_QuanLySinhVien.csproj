@@ -53,6 +53,9 @@
     <Compile Include="ChuyenNganh.cs">
       <DependentUpon>QuanLySinhVienEntities.tt</DependentUpon>
     </Compile>
+    <Compile Include="DAL_DangKyMonHoc.cs" />
+    <Compile Include="DAL_MonHoc.cs" />
+    <Compile Include="DAL_ChuyenNganh.cs" />
     <Compile Include="MonHoc.cs">
       <DependentUpon>QuanLySinhVienEntities.tt</DependentUpon>
     </Compile>
@@ -107,6 +110,12 @@
       <DependentUpon>QuanLySinhVienEntities.edmx</DependentUpon>
       <LastGenOutput>QuanLySinhVienEntities.cs</LastGenOutput>
     </Content>
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\DTO_QuanLySinhVien\DTO_QuanLySinhVien.csproj">
+      <Project>{6c3ab4f9-6ba5-408f-be77-7ac104bbeabf}</Project>
+      <Name>DTO_QuanLySinhVien</Name>
+    </ProjectReference>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

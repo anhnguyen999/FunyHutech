@@ -4,7 +4,7 @@
   <edmx:Runtime>
     <!-- SSDL content -->
     <edmx:StorageModels>
-      <Schema Namespace="QuanLySinhVienModel.Store" Provider="System.Data.SqlClient" ProviderManifestToken="2012" Alias="Self" xmlns:store="http://schemas.microsoft.com/ado/2007/12/edm/EntityStoreSchemaGenerator" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm/ssdl">
+    <Schema Namespace="QuanLySinhVienModel.Store" Provider="System.Data.SqlClient" ProviderManifestToken="2012" Alias="Self" xmlns:store="http://schemas.microsoft.com/ado/2007/12/edm/EntityStoreSchemaGenerator" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm/ssdl">
         <EntityType Name="ChuyenNganh">
           <Key>
             <PropertyRef Name="MaChuyenNganh" />
@@ -27,6 +27,7 @@
           <Property Name="MaSV" Type="varchar" MaxLength="50" Nullable="false" />
           <Property Name="HoTen" Type="nvarchar" MaxLength="50" />
           <Property Name="GioiTinh" Type="bit" />
+          <Property Name="MaChuyenNganh" Type="int" />
         </EntityType>
         <EntityType Name="sysdiagrams">
           <Key>
@@ -55,6 +56,18 @@
               <PropertyRef Name="MaChuyenNganh" />
             </Principal>
             <Dependent Role="MonHoc">
+              <PropertyRef Name="MaChuyenNganh" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_SinhVien_ChuyenNganh">
+          <End Role="ChuyenNganh" Type="Self.ChuyenNganh" Multiplicity="0..1" />
+          <End Role="SinhVien" Type="Self.SinhVien" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="ChuyenNganh">
+              <PropertyRef Name="MaChuyenNganh" />
+            </Principal>
+            <Dependent Role="SinhVien">
               <PropertyRef Name="MaChuyenNganh" />
             </Dependent>
           </ReferentialConstraint>
@@ -93,6 +106,10 @@
             <End Role="ChuyenNganh" EntitySet="ChuyenNganh" />
             <End Role="MonHoc" EntitySet="MonHoc" />
           </AssociationSet>
+          <AssociationSet Name="FK_SinhVien_ChuyenNganh" Association="Self.FK_SinhVien_ChuyenNganh">
+            <End Role="ChuyenNganh" EntitySet="ChuyenNganh" />
+            <End Role="SinhVien" EntitySet="SinhVien" />
+          </AssociationSet>
           <AssociationSet Name="FK_ThongTinDangKy_MonHoc" Association="Self.FK_ThongTinDangKy_MonHoc">
             <End Role="MonHoc" EntitySet="MonHoc" />
             <End Role="ThongTinDangKy" EntitySet="ThongTinDangKy" />
@@ -102,8 +119,7 @@
             <End Role="ThongTinDangKy" EntitySet="ThongTinDangKy" />
           </AssociationSet>
         </EntityContainer>
-      </Schema>
-    </edmx:StorageModels>
+      </Schema></edmx:StorageModels>
     <!-- CSDL content -->
     <edmx:ConceptualModels>
       <Schema Namespace="QuanLySinhVienModel" Alias="Self" annotation:UseStrongSpatialTypes="false" xmlns:annotation="http://schemas.microsoft.com/ado/2009/02/edm/annotation" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm">
@@ -114,6 +130,7 @@
           <Property Name="MaChuyenNganh" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
           <Property Name="TenChuyenNganh" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
           <NavigationProperty Name="MonHocs" Relationship="Self.FK_MonHoc_ChuyenNganh" FromRole="ChuyenNganh" ToRole="MonHoc" />
+          <NavigationProperty Name="SinhViens" Relationship="QuanLySinhVienModel.FK_SinhVien_ChuyenNganh" FromRole="ChuyenNganh" ToRole="SinhVien" />
         </EntityType>
         <EntityType Name="MonHoc">
           <Key>
@@ -133,6 +150,8 @@
           <Property Name="HoTen" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
           <Property Name="GioiTinh" Type="Boolean" />
           <NavigationProperty Name="ThongTinDangKies" Relationship="Self.FK_ThongTinDangKy_SinhVien" FromRole="SinhVien" ToRole="ThongTinDangKy" />
+          <Property Name="MaChuyenNganh" Type="Int32" />
+          <NavigationProperty Name="ChuyenNganh" Relationship="QuanLySinhVienModel.FK_SinhVien_ChuyenNganh" FromRole="SinhVien" ToRole="ChuyenNganh" />
         </EntityType>
         <EntityType Name="sysdiagram">
           <Key>
@@ -209,7 +228,23 @@
             <End Role="SinhVien" EntitySet="SinhViens" />
             <End Role="ThongTinDangKy" EntitySet="ThongTinDangKies" />
           </AssociationSet>
+          <AssociationSet Name="FK_SinhVien_ChuyenNganh" Association="QuanLySinhVienModel.FK_SinhVien_ChuyenNganh">
+            <End Role="ChuyenNganh" EntitySet="ChuyenNganhs" />
+            <End Role="SinhVien" EntitySet="SinhViens" />
+          </AssociationSet>
         </EntityContainer>
+        <Association Name="FK_SinhVien_ChuyenNganh">
+          <End Type="QuanLySinhVienModel.ChuyenNganh" Role="ChuyenNganh" Multiplicity="0..1" />
+          <End Type="QuanLySinhVienModel.SinhVien" Role="SinhVien" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="ChuyenNganh">
+              <PropertyRef Name="MaChuyenNganh" />
+            </Principal>
+            <Dependent Role="SinhVien">
+              <PropertyRef Name="MaChuyenNganh" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
       </Schema>
     </edmx:ConceptualModels>
     <!-- C-S mapping content -->
@@ -236,6 +271,7 @@
           <EntitySetMapping Name="SinhViens">
             <EntityTypeMapping TypeName="QuanLySinhVienModel.SinhVien">
               <MappingFragment StoreEntitySet="SinhVien">
+                <ScalarProperty Name="MaChuyenNganh" ColumnName="MaChuyenNganh" />
                 <ScalarProperty Name="MaSV" ColumnName="MaSV" />
                 <ScalarProperty Name="HoTen" ColumnName="HoTen" />
                 <ScalarProperty Name="GioiTinh" ColumnName="GioiTinh" />

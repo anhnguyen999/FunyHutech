@@ -7,12 +7,13 @@
       <Diagram DiagramId="40edc9304bf64e57952e5b7c3a806306" Name="Diagram1">
         <EntityTypeShape EntityType="QuanLySinhVienModel.ChuyenNganh" Width="1.5" PointX="0.75" PointY="1.25" IsExpanded="true" />
         <EntityTypeShape EntityType="QuanLySinhVienModel.MonHoc" Width="1.5" PointX="3" PointY="1" IsExpanded="true" />
-        <EntityTypeShape EntityType="QuanLySinhVienModel.SinhVien" Width="1.5" PointX="3" PointY="5.125" IsExpanded="true" />
-        <EntityTypeShape EntityType="QuanLySinhVienModel.sysdiagram" Width="1.5" PointX="5.75" PointY="4.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="QuanLySinhVienModel.SinhVien" Width="1.5" PointX="3" PointY="3.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="QuanLySinhVienModel.sysdiagram" Width="1.5" PointX="7.75" PointY="1.875" IsExpanded="true" />
         <EntityTypeShape EntityType="QuanLySinhVienModel.ThongTinDangKy" Width="1.5" PointX="5.25" PointY="0.875" IsExpanded="true" />
         <AssociationConnector Association="QuanLySinhVienModel.FK_MonHoc_ChuyenNganh" ManuallyRouted="false" />
         <AssociationConnector Association="QuanLySinhVienModel.FK_ThongTinDangKy_MonHoc" ManuallyRouted="false" />
         <AssociationConnector Association="QuanLySinhVienModel.FK_ThongTinDangKy_SinhVien" ManuallyRouted="false" />
+        <AssociationConnector Association="QuanLySinhVienModel.FK_SinhVien_ChuyenNganh" />
       </Diagram>
     </edmx:Diagrams>
   </edmx:Designer>

@@ -37,12 +37,10 @@
             this.btnAdd = new System.Windows.Forms.Button();
             this.label4 = new System.Windows.Forms.Label();
             this.label5 = new System.Windows.Forms.Label();
-            this.checkBoxNam = new System.Windows.Forms.CheckBox();
-            this.checkBoxNu = new System.Windows.Forms.CheckBox();
-            this.lstSubject = new System.Windows.Forms.ListBox();
-            this.lstChoose = new System.Windows.Forms.ListBox();
+            this.lstMonHocChuaChon = new System.Windows.Forms.ListBox();
+            this.lstMonHocDaChon = new System.Windows.Forms.ListBox();
             this.btnDelete = new System.Windows.Forms.Button();
-            this.dataGridView1 = new System.Windows.Forms.DataGridView();
+            this.dgvDangKyMonHoc = new System.Windows.Forms.DataGridView();
             this.Column1 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.Column2 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.Column3 = new System.Windows.Forms.DataGridViewTextBoxColumn();
@@ -51,7 +49,9 @@
             this.btnRight = new System.Windows.Forms.Button();
             this.btnLeft = new System.Windows.Forms.Button();
             this.groupBox1 = new System.Windows.Forms.GroupBox();
-            ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
+            this.rdNam = new System.Windows.Forms.RadioButton();
+            this.rdNu = new System.Windows.Forms.RadioButton();
+            ((System.ComponentModel.ISupportInitialize)(this.dgvDangKyMonHoc)).BeginInit();
             this.groupBox1.SuspendLayout();
             this.SuspendLayout();
             // 
@@ -109,6 +109,7 @@
             this.cbChuyenNganh.Name = "cbChuyenNganh";
             this.cbChuyenNganh.Size = new System.Drawing.Size(430, 28);
             this.cbChuyenNganh.TabIndex = 5;
+            this.cbChuyenNganh.SelectedIndexChanged += new System.EventHandler(this.cbChuyenNganh_SelectedIndexChanged);
             this.cbChuyenNganh.Click += new System.EventHandler(this.FrmQuanLySinhVien_Load);
             // 
             // btnAdd
@@ -141,43 +142,23 @@
             this.label5.TabIndex = 8;
             this.label5.Text = "Danh Sách Các Môn Đã Chọn";
             // 
-            // checkBoxNam
+            // lstMonHocChuaChon
             // 
-            this.checkBoxNam.AutoSize = true;
-            this.checkBoxNam.Location = new System.Drawing.Point(339, 155);
-            this.checkBoxNam.Name = "checkBoxNam";
-            this.checkBoxNam.Size = new System.Drawing.Size(59, 21);
-            this.checkBoxNam.TabIndex = 9;
-            this.checkBoxNam.Text = "Nam";
-            this.checkBoxNam.UseVisualStyleBackColor = true;
+            this.lstMonHocChuaChon.FormattingEnabled = true;
+            this.lstMonHocChuaChon.ItemHeight = 16;
+            this.lstMonHocChuaChon.Location = new System.Drawing.Point(149, 211);
+            this.lstMonHocChuaChon.Name = "lstMonHocChuaChon";
+            this.lstMonHocChuaChon.Size = new System.Drawing.Size(259, 100);
+            this.lstMonHocChuaChon.TabIndex = 11;
             // 
-            // checkBoxNu
+            // lstMonHocDaChon
             // 
-            this.checkBoxNu.AutoSize = true;
-            this.checkBoxNu.Location = new System.Drawing.Point(487, 155);
-            this.checkBoxNu.Name = "checkBoxNu";
-            this.checkBoxNu.Size = new System.Drawing.Size(48, 21);
-            this.checkBoxNu.TabIndex = 10;
-            this.checkBoxNu.Text = "Nữ";
-            this.checkBoxNu.UseVisualStyleBackColor = true;
-            // 
-            // lstSubject
-            // 
-            this.lstSubject.FormattingEnabled = true;
-            this.lstSubject.ItemHeight = 16;
-            this.lstSubject.Location = new System.Drawing.Point(149, 211);
-            this.lstSubject.Name = "lstSubject";
-            this.lstSubject.Size = new System.Drawing.Size(259, 100);
-            this.lstSubject.TabIndex = 11;
-            // 
-            // lstChoose
-            // 
-            this.lstChoose.FormattingEnabled = true;
-            this.lstChoose.ItemHeight = 16;
-            this.lstChoose.Location = new System.Drawing.Point(505, 211);
-            this.lstChoose.Name = "lstChoose";
-            this.lstChoose.Size = new System.Drawing.Size(259, 100);
-            this.lstChoose.TabIndex = 12;
+            this.lstMonHocDaChon.FormattingEnabled = true;
+            this.lstMonHocDaChon.ItemHeight = 16;
+            this.lstMonHocDaChon.Location = new System.Drawing.Point(505, 211);
+            this.lstMonHocDaChon.Name = "lstMonHocDaChon";
+            this.lstMonHocDaChon.Size = new System.Drawing.Size(259, 100);
+            this.lstMonHocDaChon.TabIndex = 12;
             // 
             // btnDelete
             // 
@@ -189,57 +170,53 @@
             this.btnDelete.Text = "Xóa";
             this.btnDelete.UseVisualStyleBackColor = true;
             // 
-            // dataGridView1
+            // dgvDangKyMonHoc
             // 
-            this.dataGridView1.AllowUserToAddRows = false;
-            this.dataGridView1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dataGridView1.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
+            this.dgvDangKyMonHoc.AllowUserToAddRows = false;
+            this.dgvDangKyMonHoc.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
+            this.dgvDangKyMonHoc.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.dgvDangKyMonHoc.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
             this.Column1,
             this.Column2,
             this.Column3,
             this.Column4,
             this.Column5});
-            this.dataGridView1.Location = new System.Drawing.Point(16, 367);
-            this.dataGridView1.Name = "dataGridView1";
-            this.dataGridView1.RowHeadersWidth = 51;
-            this.dataGridView1.RowTemplate.Height = 24;
-            this.dataGridView1.Size = new System.Drawing.Size(823, 151);
-            this.dataGridView1.TabIndex = 14;
+            this.dgvDangKyMonHoc.Location = new System.Drawing.Point(16, 367);
+            this.dgvDangKyMonHoc.Name = "dgvDangKyMonHoc";
+            this.dgvDangKyMonHoc.RowHeadersWidth = 51;
+            this.dgvDangKyMonHoc.RowTemplate.Height = 24;
+            this.dgvDangKyMonHoc.Size = new System.Drawing.Size(823, 151);
+            this.dgvDangKyMonHoc.TabIndex = 14;
             // 
             // Column1
             // 
             this.Column1.HeaderText = "Mã Sinh Viên";
             this.Column1.MinimumWidth = 6;
             this.Column1.Name = "Column1";
-            this.Column1.Width = 125;
             // 
             // Column2
             // 
             this.Column2.HeaderText = "Họ Tên";
             this.Column2.MinimumWidth = 6;
             this.Column2.Name = "Column2";
-            this.Column2.Width = 125;
             // 
             // Column3
             // 
             this.Column3.HeaderText = "Chuyên Ngành";
             this.Column3.MinimumWidth = 6;
             this.Column3.Name = "Column3";
-            this.Column3.Width = 125;
             // 
             // Column4
             // 
             this.Column4.HeaderText = "Giới Tính";
             this.Column4.MinimumWidth = 6;
             this.Column4.Name = "Column4";
-            this.Column4.Width = 125;
             // 
             // Column5
             // 
             this.Column5.HeaderText = "Số Môn";
             this.Column5.MinimumWidth = 6;
             this.Column5.Name = "Column5";
-            this.Column5.Width = 125;
             // 
             // btnRight
             // 
@@ -250,6 +227,7 @@
             this.btnRight.TabIndex = 15;
             this.btnRight.Text = ">";
             this.btnRight.UseVisualStyleBackColor = true;
+            this.btnRight.Click += new System.EventHandler(this.btnRight_Click);
             // 
             // btnLeft
             // 
@@ -260,15 +238,16 @@
             this.btnLeft.TabIndex = 16;
             this.btnLeft.Text = "<";
             this.btnLeft.UseVisualStyleBackColor = true;
+            this.btnLeft.Click += new System.EventHandler(this.btnLeft_Click);
             // 
             // groupBox1
             // 
+            this.groupBox1.Controls.Add(this.rdNu);
+            this.groupBox1.Controls.Add(this.rdNam);
             this.groupBox1.Controls.Add(this.btnLeft);
             this.groupBox1.Controls.Add(this.btnRight);
-            this.groupBox1.Controls.Add(this.lstChoose);
-            this.groupBox1.Controls.Add(this.lstSubject);
-            this.groupBox1.Controls.Add(this.checkBoxNu);
-            this.groupBox1.Controls.Add(this.checkBoxNam);
+            this.groupBox1.Controls.Add(this.lstMonHocDaChon);
+            this.groupBox1.Controls.Add(this.lstMonHocChuaChon);
             this.groupBox1.Controls.Add(this.label5);
             this.groupBox1.Controls.Add(this.label4);
             this.groupBox1.Controls.Add(this.cbChuyenNganh);
@@ -284,19 +263,41 @@
             this.groupBox1.TabStop = false;
             this.groupBox1.Text = "Thông Tin Sinh Viên";
             // 
+            // rdNam
+            // 
+            this.rdNam.AutoSize = true;
+            this.rdNam.Location = new System.Drawing.Point(318, 154);
+            this.rdNam.Name = "rdNam";
+            this.rdNam.Size = new System.Drawing.Size(58, 21);
+            this.rdNam.TabIndex = 17;
+            this.rdNam.TabStop = true;
+            this.rdNam.Text = "Nam";
+            this.rdNam.UseVisualStyleBackColor = true;
+            // 
+            // rdNu
+            // 
+            this.rdNu.AutoSize = true;
+            this.rdNu.Location = new System.Drawing.Point(462, 154);
+            this.rdNu.Name = "rdNu";
+            this.rdNu.Size = new System.Drawing.Size(47, 21);
+            this.rdNu.TabIndex = 18;
+            this.rdNu.TabStop = true;
+            this.rdNu.Text = "Nữ";
+            this.rdNu.UseVisualStyleBackColor = true;
+            // 
             // frmQuanLySinhVien
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(856, 530);
             this.Controls.Add(this.groupBox1);
-            this.Controls.Add(this.dataGridView1);
+            this.Controls.Add(this.dgvDangKyMonHoc);
             this.Controls.Add(this.btnDelete);
             this.Controls.Add(this.btnAdd);
             this.Name = "frmQuanLySinhVien";
             this.Text = "Đăng Ký Môn Học";
             this.Load += new System.EventHandler(this.FrmQuanLySinhVien_Load);
-            ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dgvDangKyMonHoc)).EndInit();
             this.groupBox1.ResumeLayout(false);
             this.groupBox1.PerformLayout();
             this.ResumeLayout(false);
@@ -314,12 +315,10 @@
         private System.Windows.Forms.Button btnAdd;
         private System.Windows.Forms.Label label4;
         private System.Windows.Forms.Label label5;
-        private System.Windows.Forms.CheckBox checkBoxNam;
-        private System.Windows.Forms.CheckBox checkBoxNu;
-        private System.Windows.Forms.ListBox lstSubject;
-        private System.Windows.Forms.ListBox lstChoose;
+        private System.Windows.Forms.ListBox lstMonHocChuaChon;
+        private System.Windows.Forms.ListBox lstMonHocDaChon;
         private System.Windows.Forms.Button btnDelete;
-        private System.Windows.Forms.DataGridView dataGridView1;
+        private System.Windows.Forms.DataGridView dgvDangKyMonHoc;
         private System.Windows.Forms.Button btnRight;
         private System.Windows.Forms.Button btnLeft;
         private System.Windows.Forms.DataGridViewTextBoxColumn Column1;
@@ -328,5 +327,7 @@
         private System.Windows.Forms.DataGridViewTextBoxColumn Column4;
         private System.Windows.Forms.DataGridViewTextBoxColumn Column5;
         private System.Windows.Forms.GroupBox groupBox1;
+        private System.Windows.Forms.RadioButton rdNu;
+        private System.Windows.Forms.RadioButton rdNam;
     }
 }

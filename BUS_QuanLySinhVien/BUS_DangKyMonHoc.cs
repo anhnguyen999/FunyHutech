@@ -7,17 +7,17 @@ using System.Threading.Tasks;
 
 namespace BUS_QuanLySinhVien
 {
-    public class BUS_ChuyenNganh
+    public class BUS_DangKyMonHoc
     {
-        DAL_ChuyenNganh dal_ChuyenNganh = new DAL_ChuyenNganh();
-        public BUS_ChuyenNganh()
+        DAL_DangKyMonHoc dal_DangKyMonHoc = new DAL_DangKyMonHoc();
+        public BUS_DangKyMonHoc()
         {
 
         }
 
-        public List<ChuyenNganh> GetAll()
+        public List<ThongTinDangKy> GetAll()
         {
-            return dal_ChuyenNganh.GetAll();
+            return dal_DangKyMonHoc.GetAll();
         }
     }
 }

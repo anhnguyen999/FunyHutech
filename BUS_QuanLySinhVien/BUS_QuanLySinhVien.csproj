@@ -51,6 +51,8 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="BUS_DangKyMonHoc.cs" />
+    <Compile Include="BUS_MonHoc.cs" />
     <Compile Include="BUS_ChuyenNganh.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
