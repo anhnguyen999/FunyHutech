@@ -4,12 +4,11 @@
   <edmx:Designer xmlns="http://schemas.microsoft.com/ado/2009/11/edmx">
     <!-- Diagram content (shape and connector positions) -->
     <edmx:Diagrams>
-      <Diagram DiagramId="1a29a8864a5d4c73952c96401ab89c9e" Name="Diagram1" ZoomLevel="74">
+      <Diagram DiagramId="f776dc8f8ca8430891d9a7a4653e2785" Name="Diagram1">
         <EntityTypeShape EntityType="QuanLySinhVienModel.ChuyenNganh" Width="1.5" PointX="0.75" PointY="1.25" IsExpanded="true" />
         <EntityTypeShape EntityType="QuanLySinhVienModel.DangKyMonHoc" Width="1.5" PointX="5.25" PointY="0.875" IsExpanded="true" />
         <EntityTypeShape EntityType="QuanLySinhVienModel.MonHoc" Width="1.5" PointX="3" PointY="1" IsExpanded="true" />
         <EntityTypeShape EntityType="QuanLySinhVienModel.SinhVien" Width="1.5" PointX="3" PointY="5.125" IsExpanded="true" />
-        <EntityTypeShape EntityType="QuanLySinhVienModel.sysdiagram" Width="1.5" PointX="5.75" PointY="4.75" IsExpanded="true" />
         <AssociationConnector Association="QuanLySinhVienModel.FK_MonHoc_ChuyenNganh" ManuallyRouted="false" />
         <AssociationConnector Association="QuanLySinhVienModel.FK_DangKyMonHoc_MonHoc" ManuallyRouted="false" />
         <AssociationConnector Association="QuanLySinhVienModel.FK_DangKyMonHoc_SinhVien1" ManuallyRouted="false" />

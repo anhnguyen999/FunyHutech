@@ -29,6 +29,5 @@ namespace DAL_QuanLySinhVien
         public virtual DbSet<DangKyMonHoc> DangKyMonHocs { get; set; }
         public virtual DbSet<MonHoc> MonHocs { get; set; }
         public virtual DbSet<SinhVien> SinhViens { get; set; }
-        public virtual DbSet<sysdiagram> sysdiagrams { get; set; }
     }
 }

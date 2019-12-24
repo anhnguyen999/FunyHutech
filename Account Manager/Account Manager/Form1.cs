@@ -82,7 +82,7 @@ namespace Account_Manager
                 MessageBox.Show(ex.Message, "Notification");
             }
         }
-
+        //Xoa
         private void btnDelete_Click(object sender, EventArgs e)
         {
             foreach (ListViewItem item in lstAccount.Items)

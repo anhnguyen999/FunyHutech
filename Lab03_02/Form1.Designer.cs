@@ -182,6 +182,7 @@
             this.btnBold.Name = "btnBold";
             this.btnBold.Size = new System.Drawing.Size(29, 25);
             this.btnBold.Text = "toolStripButton3";
+            this.btnBold.Click += new System.EventHandler(this.btnBold_Click_1);
             // 
             // btnOblique
             // 
