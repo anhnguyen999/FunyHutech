@@ -8,6 +8,9 @@ namespace DTO_QuanLySinhVien
 {
     public class DTO_DangKyMonHoc
     {
+        /// <summary>
+        /// Sơn + Dương
+        /// </summary>
         public string MaSV { get; set; }
         public string HoTen { get; set; }
         public string TenChuyenNganh { get; set; }

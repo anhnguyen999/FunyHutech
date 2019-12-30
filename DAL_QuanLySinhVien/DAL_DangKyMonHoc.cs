@@ -9,6 +9,7 @@ namespace DAL_QuanLySinhVien
 {
     public class DAL_DangKyMonHoc
     {
+        //Sơn + Dương +Toàn
         QuanLySinhVienEntities dbContext = new QuanLySinhVienEntities();
         //public List<DTO_DangKyMonHoc> GetAll()
         //{

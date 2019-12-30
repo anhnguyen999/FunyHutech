@@ -7,6 +7,7 @@ using System.Threading.Tasks;
 
 namespace BUS_QuanLySinhVien
 {
+    //Sơn + Dương
     public class BUS_DangKyMonHoc
     {
         DAL_DangKyMonHoc dal_DangKyMonHoc = new DAL_DangKyMonHoc();
